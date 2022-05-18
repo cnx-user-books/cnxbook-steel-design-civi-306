@@ -1,0 +1,444 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Effective Net Area With Shear Lag</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>b545b5d6-7874-4c6f-b7df-6ecd32123666</md:uuid>
+</metadata>
+
+  <content>
+   <section id="intro">
+    <title>Why use the factor U?</title>
+    <para id="intro1">
+     "Shear lag occurs when some elements of the cross section are not
+     connected, as when only one leg of an angle is bolted to a gusset
+     plate.  The consequence of this partial connection is that the
+     connected element becomes overloaded and the unconnected part is
+     not fully stressed.  Lengthening the connected region will reduce
+     this effect.  Research by Munse and Chesson (1963) suggests that
+     shear lag be accounted for by using a reduced, or effective, net
+     area.  Because shear lag affects both bolted and welded
+     connections, the effective net area concept applies to both types
+     of connections."  <cite><cite-title>LRFD Steel Design Second Edition --
+     William T. Segui</cite-title></cite>
+    </para>
+   
+    <figure id="intro2">
+     <media id="idm10382944" alt=""><image src="../../media/shearlagpic.bmp" mime-type="image/bmp"/></media>
+     <caption>
+	    An L-shaped member that is only bolted on one side.  This
+	    type of member will have shear lag.</caption>
+    </figure>
+   </section>
+
+   <section id="eqns">
+    <title>Bolted Sections</title>
+    <para id="eqns1">
+     The equation for the effective net area is:
+     <equation id="eqns2">
+      <m:math>
+       <m:apply>
+        <m:eq/>
+         <m:ci>
+          <m:msub>
+           <m:mi>A</m:mi>
+           <m:mi>e</m:mi>
+          </m:msub>
+         </m:ci>
+         <m:apply>
+          <m:times/>
+           <m:ci>
+            <m:msub>
+             <m:mi>A</m:mi>
+             <m:mi>n</m:mi>
+            </m:msub>
+           </m:ci>
+           <m:ci>U</m:ci>
+         </m:apply>
+       </m:apply>
+      </m:math>
+     </equation>
+     <equation id="eqns3">
+      <m:math>
+       <m:apply>
+        <m:eq/>
+         <m:ci>U</m:ci>
+         <m:apply>
+          <m:leq/>
+           <m:apply>
+            <m:minus/>
+             <m:cn>1</m:cn>
+             <m:apply>
+              <m:divide/>
+               <m:apply>
+                <m:conjugate/>
+                 <m:ci>x</m:ci>
+               </m:apply>
+               <m:ci>ℓ</m:ci>
+             </m:apply>
+           </m:apply>
+           <m:cn>0.9</m:cn>
+         </m:apply>
+       </m:apply>
+      </m:math>
+     </equation>
+    </para>
+
+    <list id="eqns5">
+     <title>where:</title>
+     <item>
+      <m:math>
+       <m:ci>
+        <m:msub>
+         <m:mi>A</m:mi>
+         <m:mi>e</m:mi>
+        </m:msub>
+       </m:ci>
+      </m:math>
+      = effective area, 
+      <m:math>
+       <m:ci>
+        <m:msup>
+         <m:mi>in.</m:mi>
+         <m:mn>2</m:mn>
+        </m:msup>
+       </m:ci>
+      </m:math>
+     </item>
+
+     <item>
+      <m:math>
+       <m:ci>
+        <m:msub>
+         <m:mi>A</m:mi>
+         <m:mi>n</m:mi>
+        </m:msub>
+       </m:ci>
+      </m:math>
+      = net area, 
+      <m:math>
+       <m:ci>
+        <m:msup>
+         <m:mi>in.</m:mi>
+         <m:mn>2</m:mn>
+        </m:msup>
+       </m:ci>
+      </m:math>
+     </item>
+
+     <item>
+      <m:math>
+       <m:ci>U</m:ci>
+      </m:math>
+      = reduction coefficient
+     </item>
+
+     <item>
+      <m:math>
+       <m:apply>
+        <m:conjugate/>
+         <m:ci>x</m:ci>
+       </m:apply>
+      </m:math>
+      = connection eccentricity, in.
+     </item>
+    </list>
+      <figure id="eqns6">
+       <media id="idp9680" alt=""><image src="../../media/x.bmp" mime-type="image/bmp"/></media>
+       <caption>
+	    An example of the connection eccentricity for an L-shaped
+	    member.</caption>
+      </figure>
+    <list id="eqns7">
+     <item>
+      <m:math>
+       <m:ci>ℓ</m:ci>
+      </m:math>
+      = length of the connection in the direction of loading, in.
+     </item>
+
+    </list>
+   </section>
+
+   <section id="weld">
+    <title>Welded sections</title>
+    <para id="weld1">
+     The equation for the effective net area depends on the type of weld
+    </para>
+
+    <list list-type="enumerated" id="weld2">
+     <item>
+     When the tension is transmitted only by a longitudinal weld
+     connecting the member to something other than a plate, or the
+     weld is both longitudinal and transverse:
+     <equation id="weld3">
+      <m:math>
+       <m:apply>
+        <m:eq/>
+         <m:ci>
+          <m:msub>
+           <m:mi>A</m:mi>
+           <m:mi>e</m:mi>
+          </m:msub>
+         </m:ci>
+         <m:apply>
+          <m:times/>
+           <m:ci>
+            <m:msub>
+             <m:mi>A</m:mi>
+             <m:mi>g</m:mi>
+            </m:msub>
+           </m:ci>
+           <m:ci>U</m:ci>
+         </m:apply>
+       </m:apply>
+      </m:math>
+     </equation>
+     <equation id="weld4">
+      <m:math>
+       <m:apply>
+        <m:eq/>
+         <m:ci>U</m:ci>
+         <m:apply>
+          <m:leq/>
+           <m:apply>
+            <m:minus/>
+             <m:cn>1</m:cn>
+             <m:apply>
+              <m:divide/>
+               <m:apply>
+                <m:conjugate/>
+                 <m:ci>x</m:ci>
+               </m:apply>
+               <m:ci>ℓ</m:ci>
+             </m:apply>
+           </m:apply>
+           <m:cn>0.9</m:cn>
+         </m:apply>
+       </m:apply>
+      </m:math>
+     </equation>
+    </item>
+
+    <item>
+     When the tension is transmitted only by a transverse weld:
+     <equation id="weld6">
+      <m:math>
+       <m:apply>
+        <m:eq/>
+         <m:ci>
+          <m:msub>
+           <m:mi>A</m:mi>
+           <m:mi>e</m:mi>
+          </m:msub>
+         </m:ci>
+         <m:apply>
+          <m:times/>
+           <m:ci>A</m:ci>
+           <m:ci>U</m:ci>
+         </m:apply>
+       </m:apply>
+      </m:math>
+     </equation>
+     <equation id="weld7">
+      <m:math>
+       <m:apply>
+        <m:eq/>
+         <m:ci>U</m:ci>
+         <m:cn>1.0</m:cn>
+       </m:apply>
+      </m:math>
+     </equation>
+    </item>
+
+    <item>
+     When the tension is transmitted to a plate only by longitudinal
+     welds along both edges at the end of the plate:
+     <equation id="weld9">
+      <m:math>
+       <m:apply>
+        <m:eq/>
+         <m:ci>
+          <m:msub>
+           <m:mi>A</m:mi>
+           <m:mi>e</m:mi>
+          </m:msub>
+         </m:ci>
+         <m:apply>
+          <m:times/>
+           <m:ci>
+            <m:msub>
+             <m:mi>A</m:mi>
+             <m:mi>g</m:mi>
+            </m:msub>
+           </m:ci>
+           <m:ci>U</m:ci>
+         </m:apply>
+       </m:apply>
+      </m:math>
+     </equation>
+
+     <list id="weld10">
+      <title>where</title>
+      <item>
+       For 
+       <m:math>
+        <m:apply>
+         <m:geq/>
+          <m:ci>ℓ</m:ci>
+          <m:apply>
+           <m:times/>
+            <m:cn>2</m:cn>
+            <m:ci>w</m:ci>
+          </m:apply>
+        </m:apply>
+       </m:math>
+       ........................... 
+		<m:math>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci>U</m:ci>
+		    <m:cn>1.00</m:cn>
+		  </m:apply>
+		</m:math>
+      </item>
+      <item>
+       For 
+       <m:math>
+        <m:apply>
+         <m:gt/>
+          <m:apply>
+           <m:times/>
+            <m:cn>2</m:cn>
+            <m:ci>w</m:ci>
+          </m:apply>
+          <m:ci>ℓ</m:ci>
+          <m:apply>
+           <m:times/>
+            <m:cn>1.5</m:cn>
+            <m:ci>w</m:ci>
+          </m:apply>
+        </m:apply>
+       </m:math>
+       .................. 
+		<m:math>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci>U</m:ci>
+		    <m:cn>0.87</m:cn>
+		  </m:apply>
+		</m:math>
+      </item>
+      <item>
+       For 
+       <m:math>
+        <m:apply>
+         <m:gt/>
+          <m:apply>
+           <m:times/>
+            <m:cn>1.5</m:cn>
+            <m:ci>w</m:ci>
+          </m:apply>
+          <m:ci>ℓ</m:ci>
+          <m:ci>w</m:ci>
+        </m:apply>
+       </m:math>
+       .................... 
+		<m:math>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci>U</m:ci>
+		    <m:cn>0.75</m:cn>
+		  </m:apply>
+		</m:math>
+      </item>
+
+     </list>
+     </item>
+    </list>
+
+    <list id="weld11">
+     <title>where:</title>
+     <item>
+      <m:math>
+       <m:ci>
+        <m:msub>
+         <m:mi>A</m:mi>
+         <m:mi>e</m:mi>
+        </m:msub>
+       </m:ci>
+      </m:math>
+      = effective area, 
+      <m:math>
+       <m:ci>
+        <m:msup>
+         <m:mi>in.</m:mi>
+         <m:mn>2</m:mn>
+        </m:msup>
+       </m:ci>
+      </m:math>
+     </item>
+
+     <item>
+      <m:math>
+       <m:ci>
+        <m:msub>
+         <m:mi>A</m:mi>
+         <m:mi>g</m:mi>
+        </m:msub>
+       </m:ci>
+      </m:math>
+      = gross area, 
+      <m:math>
+       <m:ci>
+        <m:msup>
+         <m:mi>in.</m:mi>
+         <m:mn>2</m:mn>
+        </m:msup>
+       </m:ci>
+      </m:math>
+     </item>
+
+     <item>
+      <m:math>
+       <m:ci>A</m:ci>
+      </m:math>
+      = area of directly connected elements, 
+      <m:math>
+       <m:ci>
+        <m:msup>
+         <m:mi>in.</m:mi>
+         <m:mn>2</m:mn>
+        </m:msup>
+       </m:ci>
+      </m:math>
+     </item>
+
+     <item>
+      <m:math>
+       <m:ci>U</m:ci>
+      </m:math>
+      = reduction coefficient
+     </item>
+
+     <item>
+      <m:math>
+       <m:apply>
+        <m:conjugate/>
+         <m:ci>x</m:ci>
+       </m:apply>
+      </m:math>
+      = connection eccentricity, in.
+     </item>
+
+     <item>
+      <m:math>
+       <m:ci>ℓ</m:ci>
+      </m:math>
+      = length of the longest weld, in.
+     </item>
+
+    </list>    
+ 
+   </section>
+
+  </content>
+  
+</document>

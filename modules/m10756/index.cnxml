@@ -1,0 +1,363 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Lateral Torsional Buckling</title>
+    <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>1cea8de3-5ca0-4753-87f6-d30f296ebf9f</md:uuid>
+</metadata>
+
+    <content>   
+      <section id="intro">
+	<title>Introduction to Lateral Torsional Buckling</title>
+	<para id="intro1">
+	  The second limit state for beams is Lateral Torsional
+	  Buckling, LTB for short.  LTB occurs when the compression
+	  portion of a cross section is restrained by the tension
+	  portion and the deflection due to flexural buckling is
+	  accompanied by torsion or twisting.  The way to prevent LTB
+	  is to have adequate lateral bracing at adequate intervals
+	  along the beam.  The limit state is the interval of the
+	  bracing.
+	</para>
+	
+	<para id="intro2">
+	  For each cross section, it is possible to compute limits for
+	  LTB.  The laterally unbraced length,
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>L</m:mi>
+		<m:mi>b</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  , is compared to two limit states, 
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>L</m:mi>
+		<m:mi>p</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  and 
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>L</m:mi>
+		<m:mi>r</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  .  Depending on which limit state  
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>L</m:mi>
+		<m:mi>b</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  sits at, the maximum moment for the beam can be calculated.
+	</para>
+      </section>
+      
+      <section id="eqns">
+	<title>Equations to determine LTB</title>
+	<figure id="eqns1">
+	  <media id="idm945024" alt=""><image src="../../media/graphltb.bmp" mime-type="image/bmp"/></media>
+	  <caption>This graph illustrates the LTB options</caption>
+	</figure>
+
+	<list id="eqns2">
+	  <item>
+	    When, 
+	    <equation id="eqns3">
+	      <m:math>
+		<m:apply>
+		  <m:lt/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>L</m:mi>
+		      <m:mi>b</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>L</m:mi>
+		      <m:mi>p</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:math>
+	    </equation>    
+
+	    there is no LTB because
+	    <equation id="eqns4">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>M</m:mi>
+		      <m:mi>n</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>M</m:mi>
+		      <m:mi>p</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	    
+	    <equation id="eqns5">
+	      <m:math>
+		<m:apply>
+		  <m:leq/>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>M</m:mi>
+			<m:mi>p</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>F</m:mi>
+			  <m:mi>y</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>Z</m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:apply>
+		    <m:times/>
+		    <m:cn>1.5</m:cn>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>M</m:mi>
+			<m:mi>y</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	    from the yielding limit state.
+	  </item>
+	</list>
+
+	<para id="blank1">
+	</para>
+
+	<list id="eqns6">
+	  <item>
+	    When
+	    <equation id="eqns7">
+	      <m:math>
+		<m:apply>
+		  <m:lt/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>L</m:mi>
+		      <m:mi>p</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>L</m:mi>
+		      <m:mi>b</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>L</m:mi>
+		      <m:mi>r</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:math>
+	    </equation>
+
+	    the graph is linear, and therefore a linear interpolation between 
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>M</m:mi>
+		  <m:mi>p</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    and
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>M</m:mi>
+		  <m:mi>y</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    is used for the maximum moment:
+
+	    <equation id="eqns8">
+	      <m:math>
+		<m:apply>
+		  <m:leq/>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>M</m:mi>
+			<m:mi>n</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>C</m:mi>
+			  <m:mi>b</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:apply>
+			<m:minus/>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>M</m:mi>
+			    <m:mi>p</m:mi>
+			  </m:msub>
+			</m:ci>
+			<m:apply>
+			  <m:times/>
+			  <m:apply>
+			    <m:minus/>
+			    <m:ci>
+			      <m:msub>
+				<m:mi>M</m:mi>
+				<m:mi>p</m:mi>
+			      </m:msub>
+			    </m:ci>
+			    <m:ci>
+			      <m:msub>
+				<m:mi>M</m:mi>
+				<m:mi>r</m:mi>
+			      </m:msub>
+			    </m:ci>
+			  </m:apply>
+			  <m:apply>
+			    <m:divide/>
+			    <m:apply>
+			      <m:minus/>
+			      <m:ci>
+				<m:msub>
+				  <m:mi>L</m:mi>
+				  <m:mi>b</m:mi>
+				</m:msub>
+			      </m:ci>
+			      <m:ci>
+				<m:msub>
+				  <m:mi>L</m:mi>
+				  <m:mi>p</m:mi>
+				</m:msub>
+			      </m:ci>
+			    </m:apply>
+			    <m:apply>
+			      <m:minus/>
+			      <m:ci>
+				<m:msub>
+				  <m:mi>L</m:mi>
+				  <m:mi>r</m:mi>
+				</m:msub>
+			      </m:ci>
+			      <m:ci>
+				<m:msub>
+				  <m:mi>L</m:mi>
+				  <m:mi>p</m:mi>
+				</m:msub>
+			      </m:ci>
+			    </m:apply>
+			  </m:apply>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>M</m:mi>
+		      <m:mi>p</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:math>
+	    </equation>
+
+	  </item>
+	</list>
+
+	<para id="blank2">
+	</para>
+
+	<list id="eqns9">
+	  <item>
+	    And finally, when 
+	    <equation id="eqns10">
+	      <m:math>
+		<m:apply>
+		  <m:gt/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>L</m:mi>
+		      <m:mi>b</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>L</m:mi>
+		      <m:mi>r</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	    the graph is non-linear, and there is an equation to find
+	    the maximum moment in Chapter F of the Specification
+	    section of the <emphasis>Manual</emphasis> (page 16.1-34):
+
+	    <equation id="eqns11">
+	      <m:math>
+		<m:apply>
+		  <m:leq/>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>M</m:mi>
+			<m:mi>n</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>M</m:mi>
+			<m:mi>cr</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>M</m:mi>
+		      <m:mi>p</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	  </item>
+	</list>
+      </section>
+      
+    </content>
+    
+  </document>

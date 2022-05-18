@@ -1,0 +1,162 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+    <title>Yielding</title>
+    <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>032d1970-4664-4db8-a6a4-015dad53f641</md:uuid>
+</metadata>
+
+    <content>
+      <section id="intro">
+	<title>Introduction to Yielding</title>
+	<para id="intro1">
+	  The first limiting state to check in a beam is that of
+	  yielding.  The yielding equations take in to account the
+	  stress on a member and the bending moment.
+	</para>
+      </section>
+
+      <section id="eqns">
+	<title>Equations to determine yielding</title>
+	<section id="eqns1">
+	  <title>The flexural design strength as determined by the
+	  yielding limiting state is:</title>
+	  <equation id="eqns2">
+	    <m:math>
+	      <m:apply>
+		<m:times/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>φ</m:mi>
+		    <m:mi>b</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>M</m:mi>
+		    <m:mi>n</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+	    </m:math>
+	  </equation>
+	  
+
+	  <para id="where">
+	    where:
+
+	    <equation id="eqns3">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>φ</m:mi>
+		      <m:mi>b</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:cn>0.90</m:cn>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	    
+	    <equation id="eqns4">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>M</m:mi>
+		      <m:mi>n</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>M</m:mi>
+		      <m:mi>p</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	  </para>
+	</section>
+	
+	<section id="eqns5">
+	  <title>the plastic moment corresponds to:</title>
+
+	  <equation id="eqns6">
+	    <m:math>
+	      <m:apply>
+		<m:leq/>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>M</m:mi>
+		      <m:mi>p</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>F</m:mi>
+			<m:mi>y</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>Z</m:ci>
+		  </m:apply>
+		</m:apply>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>1.5</m:cn>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>M</m:mi>
+		      <m:mi>y</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </equation>
+	  
+
+	  <para id="eqns7">
+	    where, the moment corresponding to onset of yielding at
+	    the extreme fiber from an elastic stress distribution is:
+	    <equation id="eqns8">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>M</m:mi>
+		      <m:mi>y</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>F</m:mi>
+			<m:mi>y</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>S</m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	    </equation>
+
+	    <note type="note" id="idm3546752">
+	      <m:math><m:ci>Z</m:ci></m:math> and
+	      <m:math><m:ci>S</m:ci></m:math> are given in Part 1 of
+	      the <emphasis>Manual</emphasis> for each member.
+	    </note>
+	  </para>
+
+	</section>
+	
+      </section>
+    </content>
+    
+  </document>

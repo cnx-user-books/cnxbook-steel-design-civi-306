@@ -1,0 +1,673 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+    <title>Example finding K for frames</title>
+    <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>d2d6af44-f68d-430e-8017-6a2763855e69</md:uuid>
+</metadata>
+
+    <content>
+      <section id="problem">
+	<title>Problem</title>
+	
+	<para id="prob1">
+	  Find the <m:math><m:ci>K</m:ci></m:math>-value for all
+	  columns of the following frame.  All columns are oriented
+	  with the web in the plane of the paper, (the plane of
+	  buckling).
+	</para>
+	
+	<figure id="framefig">
+	  <media id="idm10265936" alt=""><image src="../../media/framepicture.bmp" mime-type="image/bmp"/></media>
+	  <caption>(not drawn to scale)</caption>
+	</figure>
+
+      </section>
+
+      <section id="givens">
+	<title>Section Properties</title>
+	<para id="sect1">
+	  The section properties can be found in the Dimensions and
+	  Properties section of the <emphasis>Manual</emphasis>.  The
+	  lengths are found on <link target-id="framefig"/>.
+	</para>
+	
+	<list id="w8x31">
+	  <title>W8 X 31</title>
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>I</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>110</m:cn>
+		  <m:apply>
+		    <m:power/>
+		    <m:ci>in.</m:ci>
+		    <m:cn>4</m:cn>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </item>
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>L</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>15</m:cn>
+		  <m:ci>ft</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </item>
+	</list>
+
+	<list id="w14x30">
+	  <title>W14 X 30</title>
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>I</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>291</m:cn>
+		  <m:apply>
+		    <m:power/>
+		    <m:ci>in.</m:ci>
+		    <m:cn>4</m:cn>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </item>
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>L</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>20</m:cn>
+		  <m:ci>ft</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </item>
+	</list>
+
+	<list id="w18x50">
+	  <title>W18 X 50</title>
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>I</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>800</m:cn>
+		  <m:apply>
+		    <m:power/>
+		    <m:ci>in.</m:ci>
+		    <m:cn>4</m:cn>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </item>
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>L</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>30</m:cn>
+		  <m:ci>ft</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math> and 
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>L</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>20</m:cn>
+		  <m:ci>ft</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </item>
+	</list>
+      </section>
+
+      <section id="solution">
+	<title>Solution</title>
+	
+	<para id="sol1">
+	  Since the columns and beams are oriented with the web as the
+	  plane of buckling, the axis of bending is the x-axis.
+	  Therefore, all values of <m:math><m:ci>I</m:ci></m:math>,
+	  above, are with respect to the x-axis.
+	</para>
+
+	<figure id="colfig">
+	  <media id="idm9391888" alt=""><image src="../../media/bentcol.bmp" mime-type="image/bmp"/></media>
+	  <caption>An example of a column bending in the x-direction.</caption>
+	</figure>
+
+	<list list-type="enumerated" id="sol2">
+	  <title>For each column:</title>
+	  <item>
+	    First we must determine the
+	    <m:math><m:ci>G</m:ci></m:math> values for each corner of
+	    the frame with the equation:
+	    <equation id="G">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>G</m:ci> 
+		  <m:apply>
+		    <m:divide/>
+		    <m:apply>
+		      <m:sum/>
+		      <m:apply>
+			<m:divide/>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>I</m:mi>
+			    <m:mi>c</m:mi>
+			  </m:msub>
+			</m:ci>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>L</m:mi>
+			    <m:mi>c</m:mi>
+			  </m:msub>
+			</m:ci>
+		      </m:apply>
+		    </m:apply>
+		    <m:apply>
+		      <m:sum/>
+		      <m:apply>
+			<m:divide/>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>I</m:mi>
+			    <m:mi>g</m:mi>
+			  </m:msub>
+			</m:ci>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>L</m:mi>
+			    <m:mi>g</m:mi>
+			  </m:msub>
+			</m:ci>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply> 
+		</m:apply>
+	      </m:math>
+	    </equation>
+	    where, <m:math><m:ci>c</m:ci></m:math> is for column and
+	    <m:math><m:ci>g</m:ci></m:math> is for girder or beam.
+
+	  </item>
+	  <item>
+	    Then we use Fig. C-C2.2a and Fig. C-C2.2b in the
+	    <emphasis>Manual</emphasis> to find the
+	    <m:math><m:ci>K</m:ci></m:math> values for each column.
+	    If a column is sidesway inhibited, it is braced against
+	    any sideways movement; if a column is sidesway
+	    uninhibited, it is not braced in the sideways
+	    direction.</item>
+	</list>
+
+	<list id="sol3">
+	  <title>Column AB</title>
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>G</m:mi>
+		    <m:mi>A</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:cn>10</m:cn>
+	      </m:apply>
+	    </m:math>
+	    because it is a pinned support.
+	  </item>
+	  
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>G</m:mi>
+		    <m:mi>B</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:divide/>
+		  <m:apply>
+		    <m:divide/>
+		    <m:cn>110</m:cn>
+		    <m:cn>15</m:cn>
+		  </m:apply>
+		  <m:apply>
+		    <m:divide/>
+		    <m:cn>800</m:cn>
+		    <m:cn>30</m:cn>
+		  </m:apply>
+		</m:apply>
+		<m:cn>0.274</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </item>
+
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:times/>
+		<m:ci>A</m:ci>
+		<m:ci>B</m:ci>
+	      </m:apply>
+	    </m:math> is sidesway inhibited (the support at
+	    <m:math><m:ci>J</m:ci></m:math> braces any sideways motion
+	    of the column) so lining up the value of
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>G</m:mi>
+		  <m:mi>A</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    and
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>G</m:mi>
+		  <m:mi>B</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    on 16.1-191 gives: 
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>K</m:ci>
+		<m:cn>0.77</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </item>
+	</list>
+
+	<list id="sol4">
+	  <title>Column CD</title>
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>G</m:mi>
+		    <m:mi>C</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:cn>10</m:cn>
+	      </m:apply>
+	    </m:math>
+	    because it is a pinned support.
+	  </item>
+	  
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>G</m:mi>
+		    <m:mi>D</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:divide/>
+		  <m:apply>
+		    <m:plus/>
+		    <m:apply>
+		      <m:divide/>
+		      <m:cn>110</m:cn>
+		      <m:cn>15</m:cn>
+		    </m:apply>
+		    <m:apply>
+		      <m:divide/>
+		      <m:cn>110</m:cn>
+		      <m:cn>12</m:cn>
+		    </m:apply>
+		  </m:apply>
+		  <m:apply>
+		    <m:plus/>
+		    <m:apply>
+		      <m:divide/>
+		      <m:cn>800</m:cn>
+		      <m:cn>30</m:cn>
+		    </m:apply>
+		    <m:apply>
+		      <m:divide/>
+		      <m:cn>800</m:cn>
+		      <m:cn>20</m:cn>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+		<m:cn>0.2475</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </item>
+
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:times/>
+		<m:ci>C</m:ci>
+		<m:ci>D</m:ci>
+	      </m:apply>
+	    </m:math> is sidesway inhibited (the support at
+	    <m:math><m:ci>J</m:ci></m:math> braces any sideways motion
+	    of the column) so lining up the value of
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>G</m:mi>
+		  <m:mi>C</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    and
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>G</m:mi>
+		  <m:mi>D</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    on 16.1-191 gives: 
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>K</m:ci>
+		<m:cn>0.76</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </item>
+	</list>
+
+	<list id="sol5">
+	  <title>Column GF</title>
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>G</m:mi>
+		    <m:mi>F</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:cn>1</m:cn>
+	      </m:apply>
+	    </m:math>
+	    because it is a pinned support that cannot move sideways,
+	    so it is like a fixed support (?check on this).
+	  </item>
+	  
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>G</m:mi>
+		    <m:mi>G</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:divide/>
+		  <m:apply>
+		    <m:plus/>
+		    <m:apply>
+		      <m:divide/>
+		      <m:cn>110</m:cn>
+		      <m:cn>15</m:cn>
+		    </m:apply>
+		    <m:apply>
+		      <m:divide/>
+		      <m:cn>110</m:cn>
+		      <m:cn>12</m:cn>
+		    </m:apply>
+		  </m:apply>
+		  <m:apply>
+		    <m:plus/>
+		    <m:apply>
+		      <m:divide/>
+		      <m:cn>800</m:cn>
+		      <m:cn>20</m:cn>
+		    </m:apply>
+		    <m:apply>
+		      <m:divide/>
+		      <m:cn>800</m:cn>
+		      <m:cn>20</m:cn>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+		<m:cn>0.206</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </item>
+
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:times/>
+		<m:ci>G</m:ci>
+		<m:ci>F</m:ci>
+	      </m:apply>
+	    </m:math> is sidesway inhibited (the support at
+	    <m:math><m:ci>J</m:ci></m:math> braces any sideways motion
+	    of the column) so lining up the value of
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>G</m:mi>
+		  <m:mi>G</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    and
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>G</m:mi>
+		  <m:mi>F</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    on 16.1-191 gives: 
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>K</m:ci>
+		<m:cn>0.67</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </item>
+	</list>
+
+	<list id="sol6">
+	  <title>Column ED</title>
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>G</m:mi>
+		    <m:mi>D</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:cn>0.2475</m:cn>
+	      </m:apply>
+	    </m:math>
+	    from before.
+	  </item>
+	  
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>G</m:mi>
+		    <m:mi>E</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:divide/>
+		  <m:apply>
+		    <m:divide/>
+		    <m:cn>110</m:cn>
+		    <m:cn>12</m:cn>
+		  </m:apply>
+		  <m:apply>
+		    <m:divide/>
+		    <m:cn>291</m:cn>
+		    <m:cn>20</m:cn>
+		  </m:apply>
+		</m:apply>
+		<m:cn>0.63</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </item>
+
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:times/>
+		<m:ci>E</m:ci>
+		<m:ci>D</m:ci>
+	      </m:apply>
+	    </m:math> is sidesway uninhibited (there is no sideways
+	    bracing for the top portion of the frame) so lining up the
+	    value of
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>G</m:mi>
+		  <m:mi>E</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    and
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>G</m:mi>
+		  <m:mi>D</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    on 16.1-192 gives: 
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>K</m:ci>
+		<m:cn>1.15</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </item>
+	</list>
+
+	<list id="sol8">
+	  <title>Column GH</title>
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>G</m:mi>
+		    <m:mi>G</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:cn>0.206</m:cn>
+	      </m:apply>
+	    </m:math>
+	    from before.
+	  </item>
+	  
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>G</m:mi>
+		    <m:mi>H</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:cn>0.63</m:cn>
+	      </m:apply>
+	    </m:math>
+	    from before.
+	  </item>
+
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:times/>
+		<m:ci>G</m:ci>
+		<m:ci>H</m:ci>
+	      </m:apply>
+	    </m:math> is sidesway uninhibited (there is no sideways
+	    bracing for the top portion of the frame) so lining up the
+	    value of
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>G</m:mi>
+		  <m:mi>G</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    and
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>G</m:mi>
+		  <m:mi>H</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    on 16.1-192 gives: 
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>K</m:ci>
+		<m:cn>1.14</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </item>
+	</list>
+	
+      </section>
+
+    </content>
+    
+  </document>

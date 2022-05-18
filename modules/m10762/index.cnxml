@@ -1,0 +1,162 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+    <title>Shear Capacity</title>
+    <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>274e25a6-c050-4b83-bbd2-a72eb9e5b151</md:uuid>
+</metadata>
+
+    <content>
+      <section id="intro">
+	<title>Introduction to Shear Capacity</title>
+	<para id="intro1">
+	  The fifth limit state for beams is Shear Capacity.  The
+	  shear capacity of a beam is the maximum amount of shear the
+	  beam can withstand before failure.  Usually the shear
+	  capacity is the controlling limit state on short spans with
+	  large loads.
+	</para>
+      </section>
+
+      <section id="eqns">
+	<title>Equations for Shear Capacity</title>
+	<para id="eqns1">
+	  The shear strength relationship is:
+	  <equation id="eqns2">
+	    <m:math>
+	      <m:apply>
+		<m:leq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>V</m:mi>
+		    <m:mi>u</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>φ</m:mi>
+		      <m:mi>v</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>V</m:mi>
+		      <m:mi>n</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </equation>
+	  where
+	  <list id="eqns3">
+	    <item>
+	      <m:math>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>V</m:mi>
+		    <m:mi>u</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:math>
+	      = maximum shear based on the controlling combination of
+	      factored loads
+	    </item>
+	    <item>
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>φ</m:mi>
+		      <m:mi>v</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:cn>0.9</m:cn>
+		</m:apply>
+	      </m:math> = resistance factor for shear
+	    </item>
+	    <item>
+	      <m:math>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>V</m:mi>
+		    <m:mi>n</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:math>
+	      = nominal shear strength
+	    </item>
+	  </list>
+	</para>
+	<para id="eqns4">
+	  The design shear strength then can be found depending,
+	  first, on whether or not the web is stiffened.  If the web
+	  of a singly or doubly symmetric beam is unstiffened and
+	  <m:math>
+	    <m:apply>
+	      <m:leq/>
+	      <m:apply>
+		<m:divide/>
+		<m:ci>h</m:ci>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>t</m:mi>
+		    <m:mi>w</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+	      <m:cn>260</m:cn>
+	    </m:apply>
+	  </m:math>
+	  , then Chapter F2 in the Specification Section of the
+	  <emphasis>Manual</emphasis> (page 16.1-35) can be used to
+	  define
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>V</m:mi>
+		<m:mi>n</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  , otherwise, Appendix F2 in the <emphasis>Manual</emphasis>
+	  (page 16.1-102) can be used.
+	</para>
+	<para id="eqns5">
+	  As long as the shear strength, 
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>V</m:mi>
+		<m:mi>u</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  , of a beam satisfies the maximum shear strength,
+	  <m:math>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>φ</m:mi>
+		  <m:mi>v</m:mi>
+		</m:msub>
+	      </m:ci>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>V</m:mi>
+		  <m:mi>n</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:apply>
+	  </m:math>
+	  , value, shear is not a limiting factor of the beam design.
+	  If the shear strength, does exceed the maximum allowable
+	  shear, a different load or a different cross-section must be
+	  chosen.
+	</para>
+      </section>
+
+    </content>
+    
+  </document>

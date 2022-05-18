@@ -1,0 +1,759 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Example with different effective lengths</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>f1214e23-7837-4919-aa7d-ffad854a2d9e</md:uuid>
+</metadata>
+
+    <content>
+      <section id="problem">
+	<title>Problem</title>
+	<para id="prob1">
+	  A W12 X 65 column, 24 feet long, is pinned at both ends in
+	  the strong direction, and pinned at the midpoint and the
+	  ends in the weak direction.  The column has A36 steel.
+	  </para> </section>
+
+      <section id="method1">
+	<title>Method 1 - with column tables</title>
+	<section id="n1">
+	  <title>Number 1 - Find effective length</title>
+	  <para id="direction">
+	    Since the x-direction is the strong one and the
+	    y-direction is the weak one, then:
+	    <equation id="eq10">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>L</m:mi>
+		      <m:mi>x</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:cn>24</m:cn>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	    <equation id="eq11">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>L</m:mi>
+		      <m:mi>y</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:cn>12</m:cn>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	    
+	  </para>
+	  <para id="notice">
+	    Notice that the effective length in the y-direction is
+	    half the total length of the member because there is a
+	    lateral support at the midpoint.
+	  </para>
+	  <para id="ks">
+	    Looking at the <emphasis>Manual</emphasis> on page
+	    16.1-189 shows that the <m:math><m:ci>K</m:ci></m:math>
+	    value for a column pinned at both ends is 1.0.  Since the
+	    column is pinned at the ends and at the middle,
+	    <equation id="eq12">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>K</m:mi>
+		      <m:mi>x</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:cn>1</m:cn>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	    <equation id="eq13">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>K</m:mi>
+		      <m:mi>y</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:cn>1</m:cn>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	  </para>
+	  <para id="now">
+	    Now we can say that:
+	    <equation id="eq2">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>K</m:mi>
+			<m:mi>x</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>L</m:mi>
+			<m:mi>x</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:times/>
+		    <m:cn>1</m:cn>
+		    <m:cn>24</m:cn>
+		  </m:apply>
+		  <m:cn>24</m:cn>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	    <equation id="eq1">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>K</m:mi>
+			<m:mi>y</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>L</m:mi>
+			<m:mi>y</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:times/>
+		    <m:cn>1</m:cn>
+		    <m:cn>12</m:cn>
+		  </m:apply>
+		  <m:cn>12</m:cn>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	  </para>
+	</section>
+	
+	<section id="n2">
+	  <title>Number 2 - Finding the capacity</title>
+	  <para id="othermanual">
+	    Since, the steel is A36, you cannot use the column tables
+	    from Chapter 4 of the Third Edition
+	    <emphasis>Manual</emphasis> as the values are all given in
+	    terms of
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>F</m:mi>
+		    <m:mi>y</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>50</m:cn>
+		  <m:ci>ksi</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>.  However, in the Second Edition, in Chapter 3,
+	    the column tables give information for 
+	    terms of
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>F</m:mi>
+		    <m:mi>y</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>36</m:cn>
+		  <m:ci>ksi</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>.
+	  </para>
+	  <para id="tables1">
+	    From page 3-24 of the Second Edition
+	    <emphasis>Manual</emphasis>, the capacity for a W12 X 65
+	    column with
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>K</m:mi>
+		      <m:mi>y</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>
+		    <m:msub>        
+		      <m:mi>L</m:mi>
+		      <m:mi>y</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+		<m:cn>12</m:cn>     
+	      </m:apply>
+	    </m:math>
+	    is 519 kips.
+	  </para>
+	  <para id="tables2">
+	    Then to find
+	    <m:math>
+	      <m:apply>
+		<m:times/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>K</m:mi>
+		    <m:mi>x</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>L</m:mi>
+		    <m:mi>x</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+	    </m:math>
+	    in terms of 
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>r</m:mi>
+		  <m:mi>y</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    ,
+	    <m:math>
+	      <m:apply>
+		<m:times/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>K</m:mi>
+		    <m:mi>x</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>L</m:mi>
+		    <m:mi>x</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+	    </m:math>
+	    must be divided by:
+	    <m:math>
+	      <m:apply>
+		<m:divide/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>r</m:mi>
+		    <m:mi>x</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>r</m:mi>
+		    <m:mi>y</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+	    </m:math>.
+	    This gives:
+	    <equation id="eq4">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:divide/>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>K</m:mi>
+			  <m:mi>x</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>L</m:mi>
+			  <m:mi>x</m:mi>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		    <m:apply>
+		      <m:divide/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>r</m:mi>
+			  <m:mi>x</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>r</m:mi>
+			  <m:mi>y</m:mi>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:apply>
+		    <m:divide/>
+		    <m:cn>24</m:cn>
+		    <m:cn>1.75</m:cn>
+		  </m:apply>
+		  <m:cn>13.71</m:cn>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	  </para>
+	  <para id="explain">
+	    This is close enough to 14, that we can then look in the
+	    tables for the <m:math><m:ci>KL</m:ci></m:math> value of
+	    14, or interpolate for 13.71) and find the capacity for
+	    the W12 X 65 member.  The capacity is 497kips.
+	  </para>
+	  
+	  
+	</section>
+      </section>
+      
+      <section id="method2">
+	<title>Method 2 - with buckling formulas</title>
+	<para id="notables">
+	  If you do not have the tables for A36 steel, you must use
+	  the formulas on page 16.1-27 of the
+	  <emphasis>Manual</emphasis>.
+	</para>
+	
+	<section id="klr">
+	  <title>Number 1 - Show the width-thickness ratio</title>
+	  <para id="wtr">
+	    In order for the equations in section E2 of the
+	    <emphasis>Manual</emphasis> to apply, the width-thickness
+	    ratio must be
+	    <m:math>
+	      <m:apply>
+		<m:lt/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>λ</m:mi>
+		    <m:mi>r</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+	    </m:math>.
+
+	    <equation id="eq20">
+	      <m:math>
+		<m:apply>
+		  <m:lt/>
+		  <m:apply>
+		    <m:divide/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>b</m:mi>
+			<m:mi>f</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:apply>
+		      <m:times/>
+		      <m:cn>2</m:cn>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>t</m:mi>
+			  <m:mi>f</m:mi>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>λ</m:mi>
+		      <m:mi>r</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	  </para>       
+
+	  <para id="pages1">
+	    The value for 
+	    <m:math>
+	      <m:apply>
+		<m:divide/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>b</m:mi>
+		    <m:mi>f</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>2</m:cn>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>t</m:mi>
+		      <m:mi>f</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	    (9.92) can be found on page 16.1-21, as well as the value
+                   for
+	    <m:math>
+	      <m:apply>
+		<m:divide/>
+		<m:ci>h</m:ci>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>t</m:mi>
+		    <m:mi>w</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+	    </m:math>
+	    (24.9).  The formula for 
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>λ</m:mi>
+		  <m:mi>r</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    can be found on page 16.1-14/15.  Then, the value for that
+	    formula can be found on page 16.1-150.
+	  </para>
+	  
+	  <para id="flange">
+	    The flanges are unstiffened and in pure compression, so
+	    the formula is:
+	    <equation id="flanges">
+	      <m:math>
+		<m:apply>
+		  <m:lt/>
+		  <m:apply>
+		    <m:eq/>
+		    <m:apply>
+		      <m:divide/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>b</m:mi>
+			  <m:mi>f</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:apply>
+			<m:times/>
+			<m:cn>2</m:cn>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>t</m:mi>
+			    <m:mi>f</m:mi>
+			  </m:msub>
+			</m:ci>
+		      </m:apply>
+		    </m:apply>
+		    <m:cn>9.92</m:cn>
+		  </m:apply>
+		  <m:apply>
+		    <m:eq/>
+		    <m:apply>
+		      <m:times/>
+		      <m:cn>0.56</m:cn>
+		      <m:apply>
+			<m:root/>
+			<m:apply>
+			  <m:divide/>
+			  <m:ci>E</m:ci>
+			  <m:ci>
+			    <m:msub>
+			      <m:mi>F</m:mi>
+			      <m:mi>y</m:mi>
+			    </m:msub>
+			  </m:ci>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		    <m:cn>15.9</m:cn>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	    
+	  </para>
+	  
+	  <para id="web">
+	    The web is stiffened and in compression, so the formula is:
+	    <equation id="stiffweb">
+	      <m:math>
+		<m:apply>
+		  <m:leq/>
+		  <m:apply>
+		    <m:eq/>
+		    <m:apply>
+		      <m:divide/>
+		      <m:ci>h</m:ci>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>t</m:mi>
+			  <m:mi>w</m:mi>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		    <m:cn>24.9</m:cn>
+		  </m:apply>
+		  <m:apply>
+		    <m:eq/>
+		    <m:apply>
+		      <m:times/>
+		      <m:cn>1.49</m:cn>
+		      <m:apply>
+			<m:root/>
+			<m:apply>
+			  <m:divide/>
+			  <m:ci>E</m:ci>
+			  <m:ci>
+			    <m:msub>
+			      <m:mi>F</m:mi>
+			      <m:mi>y</m:mi>
+			    </m:msub>
+			  </m:ci>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		    <m:cn>42.3</m:cn>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	    
+	  </para>
+
+	  <para id="also">
+	    Another way to easily find the formulas for
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>λ</m:mi>
+		  <m:mi>r</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    is to go to page 16.1-183 and look at the picture of the
+	    I-shaped member.  The arrows point to either the flange or
+	    the web and formulas correspond to the arrows giving the
+	    axial compression formulas that you need for that element
+	    of the member.
+	  </para>
+	</section>
+	
+	<section id="fcr">
+	  <title>Number 2 - Compute slenderness ratios</title>
+	  <para id="compare">
+	    The slenderness ratios can be found for both the x-axis
+	    and the y-axis.  We know <m:math><m:ci>K</m:ci></m:math>,
+	    and <m:math><m:ci>L</m:ci></m:math>, and
+	    <m:math><m:ci>r</m:ci></m:math> can be found in the
+	    properties section of the <emphasis>Manual</emphasis> on
+	    page 1-20.
+
+	    <equation id="slenderx">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:divide/>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>K</m:mi>
+			  <m:mi>x</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>L</m:mi>
+			  <m:mi>x</m:mi>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>r</m:mi>
+			<m:mi>x</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:divide/>
+		    <m:apply>
+		      <m:times/>
+		      <m:cn>24</m:cn>
+		      <m:cn>12</m:cn>
+		      <m:cn>1</m:cn>
+		    </m:apply>
+		    <m:cn>5.28</m:cn>
+		  </m:apply>
+		  <m:cn>54.54</m:cn>
+		</m:apply>
+	      </m:math>
+	    </equation>
+
+	    <equation id="slendery">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:divide/>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>K</m:mi>
+			  <m:mi>y</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>L</m:mi>
+			  <m:mi>y</m:mi>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>r</m:mi>
+			<m:mi>x</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:divide/>
+		    <m:apply>
+		      <m:times/>
+		      <m:cn>12</m:cn>
+		      <m:cn>12</m:cn>
+		      <m:cn>1</m:cn>
+		    </m:apply>
+		    <m:cn>3.02</m:cn>
+		  </m:apply>
+		  <m:cn>47.68</m:cn>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	  </para>
+
+	  <para id="p143">
+	    Then, using Table 3-36 on page 16.1-143 of the
+	    <emphasis>Manual</emphasis> and interpolation, we can
+	    determine that
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>φ</m:mi>
+		      <m:mi>c</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>F</m:mi>
+		      <m:mi>cr</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+		<m:cn>26.21</m:cn>
+	      </m:apply>
+	    </m:math> 
+
+	    , and that 
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>φ</m:mi>
+		      <m:mi>c</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>P</m:mi>
+		      <m:mi>n</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>φ</m:mi>
+		      <m:mi>c</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>F</m:mi>
+		      <m:mi>cr</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>A</m:mi>
+		      <m:mi>g</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>500</m:cn>
+		  <m:ci>k</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </para>
+	</section>               
+      </section>     
+
+      <section id="answer">
+	<title>Answer</title>
+	<para id="para11">
+	  The capacity of the W12 X 65 column is 500 kips.
+	</para>
+      </section>
+
+    </content>
+    
+  </document>

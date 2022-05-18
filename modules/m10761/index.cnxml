@@ -1,0 +1,209 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+    <title>Flange Local Buckling</title>
+    <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>e7cc002a-c162-4c77-914a-4346a8a1e3d7</md:uuid>
+</metadata>
+
+    <content>
+
+      <section id="intro">
+	<title>Introduction to Flange Local Buckling</title>
+	<para id="intro2">
+	  The fourth limit state for beams is Flange Local Buckling,
+	  or FLB for short.  It is exactly the same as Web Local
+	  Buckling, except the width-thickness ratio is in terms of
+	  the flange and not the web.  This type of buckling occurs
+	  when the width-thickness ratio is not large enough to
+	  withstand the moment on the beam.  The way to prevent this
+	  type of buckling is to limit the with-thickness ratio.
+	</para>
+
+	<para id="intro3">
+	  The limits can be computed for flange local buckling.  The
+	  width-thickness ratio is compared to
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>λ</m:mi>
+		<m:mi>p</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math> 
+	  and 
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>λ</m:mi>
+		<m:mi>r</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  .  Then the maximum moment can be calculated.
+	</para>
+      </section>
+
+      <section id="eqns">
+	<title>Equations to determine FLB</title>
+	<figure id="eqns1">
+	  <media id="idp2653200" alt=""><image src="../../media/compactgraph.bmp" mime-type="image/bmp"/></media>
+	  <caption>The graph illustrates the options for FLB</caption>
+	</figure>
+
+	<para id="eqns2">
+	  When,
+	  <equation id="eqns3"> 
+	    <m:math>
+	      <m:apply>
+		<m:lt/>
+		<m:apply>
+		  <m:divide/>
+		  <m:ci>b</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>λ</m:mi>
+		    <m:mi>p</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+	    </m:math>
+	  </equation>
+	  there is no FLB and the cross section is compact because,
+	  <equation id="eqns4">
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>M</m:mi>
+		    <m:mi>n</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>M</m:mi>
+		    <m:mi>p</m:mi>
+		  </m:msub>
+		</m:ci>    
+	      </m:apply>
+	    </m:math>
+	  </equation>
+
+	  <equation id="eqns5">
+	    <m:math>
+	      <m:apply>
+		<m:leq/>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>M</m:mi>
+		      <m:mi>p</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>F</m:mi>
+			<m:mi>y</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>Z</m:ci>
+		  </m:apply>
+		</m:apply>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>1.5</m:cn>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>M</m:mi>
+		      <m:mi>y</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </equation>
+
+	  from the yielding state.
+	</para>
+	
+	<para id="eqns6">
+	  When,
+	  <equation id="eqns7">
+	    <m:math>
+	      <m:apply>
+		<m:lt/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>λ</m:mi>
+		    <m:mi>p</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:divide/>
+		  <m:ci>b</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>λ</m:mi>
+		    <m:mi>r</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+	    </m:math>
+	  </equation>
+	  the graph is linear, and therefore a linear interpolation between
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>M</m:mi>
+		<m:mi>p</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  and
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>M</m:mi>
+		<m:mi>y</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  is used for the maximum moment.
+	</para>
+	
+	<para id="eqns8">
+	  And finally, when
+	  <equation id="eqns9">
+	    <m:math>
+	      <m:apply>
+		<m:gt/>
+		<m:apply>
+		  <m:divide/>
+		  <m:ci>b</m:ci>
+		  <m:ci>t</m:ci>
+		</m:apply>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>λ</m:mi>
+		    <m:mi>r</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+	    </m:math>
+	  </equation>
+	  the graph is non-linear, the flange is non-slender, and
+	  there is an equation to find the maximum moment in Appendix
+	  F of the Specification section of the
+	  <emphasis>Manual</emphasis> (page 16.1-96).
+	</para>
+      </section>
+
+
+    </content>
+    
+  </document>

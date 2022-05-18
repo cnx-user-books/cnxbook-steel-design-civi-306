@@ -1,0 +1,135 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Fracture Limit State</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>a9666be7-bd7a-4863-ac3c-7d2037f3f56e</md:uuid>
+</metadata>
+
+  <content>
+
+   <section id="intro">
+    <title>Introduction to Fracture</title>
+    <para id="intro1">
+     The limit state of fracture must be considered in tension members
+     to prevent failure from breaking.  "To prevent fracture, the
+     stress on the net section must be less than the tensile strength
+     <m:math>
+      <m:ci>
+       <m:msub>
+        <m:mi>F</m:mi>
+        <m:mi>u</m:mi>
+       </m:msub>
+      </m:ci>
+     </m:math>."
+    </para>
+   </section>
+
+   <section id="eqns">
+    <title>Equations for Fracture</title>
+
+    <equation id="eqns1">
+     <m:math>
+      <m:apply>
+       <m:eq/>
+        <m:ci>
+         <m:msub>
+          <m:mi>φ</m:mi>
+          <m:mi>t</m:mi>
+         </m:msub>
+        </m:ci>
+        <m:cn>0.75</m:cn>
+      </m:apply>
+     </m:math>
+    </equation>
+
+    <equation id="eqns2">
+     <m:math>
+      <m:apply>
+       <m:eq/>
+        <m:ci>
+         <m:msub>
+          <m:mi>P</m:mi>
+          <m:mi>n</m:mi>
+         </m:msub>
+        </m:ci>
+        <m:apply>
+         <m:times/>
+          <m:ci>
+           <m:msub>
+            <m:mi>F</m:mi>
+            <m:mi>u</m:mi>
+           </m:msub>
+          </m:ci>
+          <m:ci>
+           <m:msub>
+            <m:mi>A</m:mi>
+            <m:mi>e</m:mi>
+           </m:msub>
+          </m:ci>
+        </m:apply>
+      </m:apply>
+     </m:math>
+    </equation>
+
+    <para id="eqns3">
+    The resistance factor is smaller for fracture than it was for
+     yielding because failure in fracture is more sudden and serious
+     than in yielding.  Here the design strength of the tension
+     members is
+     <m:math>
+      <m:apply>
+       <m:times/>
+        <m:ci>
+         <m:msub>
+          <m:mi>φ</m:mi>
+          <m:mi>t</m:mi>
+         </m:msub>
+        </m:ci>
+        <m:ci>
+         <m:msub>
+          <m:mi>P</m:mi>
+          <m:mi>n</m:mi>
+         </m:msub>
+        </m:ci>
+      </m:apply>
+     </m:math>
+     where:
+    </para>
+ 
+    <list id="eqns4">
+     <item>
+      <m:math>
+       <m:ci>
+        <m:msub>
+         <m:mi>A</m:mi>
+         <m:mi>e</m:mi>
+        </m:msub>
+       </m:ci>
+      </m:math>
+      = effective net area, 
+      <m:math>
+       <m:ci>
+        <m:msup>
+         <m:mi>in.</m:mi>
+         <m:mn>2</m:mn>
+        </m:msup>
+       </m:ci>
+      </m:math>
+     </item>
+
+     <item>
+      <m:math>
+       <m:ci>
+        <m:msub>
+         <m:mi>F</m:mi>
+         <m:mi>u</m:mi>
+        </m:msub>
+       </m:ci>
+      </m:math>
+      = specified minimum tensile stress, ksi
+     </item>
+    </list>
+   
+   </section>
+
+  </content>
+  
+</document>

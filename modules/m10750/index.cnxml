@@ -1,0 +1,441 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Flexural-Torsional Buckling</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>00d33d5c-fbbe-4fe7-b95b-74fc7c66f515</md:uuid>
+</metadata>
+
+    <content>
+      <section id="definitions">
+	<title>Definitions</title>
+	<para id="def1">
+	  There are three ways a compression member can buckle, or
+	  become unstable.  These are <term>flexural
+	  buckling</term>, <term>torsional
+	  buckling</term>, and <term>flexural-torsional
+	  buckling</term>.
+	</para>
+	<definition id="def2">
+	  <term>Flexural buckling</term>
+	  <meaning id="idp1027808">
+	    This type of buckling can occur in any compression member
+	    that experiences a deflection caused by bending or
+	    flexure.  Flexural buckling occurs about the axis with the
+	    largest slenderness ratio, and the smallest radius of
+	    gyration.</meaning>
+	</definition>
+	<definition id="def3">
+	  <term>Torsional buckling</term>
+	  <meaning id="idp1256928">
+	    This type of buckling only occurs in compression members
+	    that are doubly-symmetric and have very slender
+	    cross-sectional elements.  It is caused by a turning about
+	    the longitudinal axis.  Torsional buckling occurs mostly
+	    in built-up sections, and almost never in rolled
+	    sections.</meaning>
+	</definition>
+	<definition id="def4">
+	  <term>Flexural-torsional buckling</term>
+	  <meaning id="idp8162960">
+	    This type of buckling only occurs in compression members
+	    that have unsymmetrical cross-section with one axis of
+	    symmetry.  Flexural-torsional buckling is the simultaneous
+	    bending and twisting of a member.  This mostly occurs in
+	    channels, structural tees, double-angle shapes, and
+	    equal-leg single angles.</meaning>
+	</definition>
+      </section>
+
+      <section id="where">
+	<title>Where to find information for flexural-torsional information</title>
+	<para id="where1">
+	  The <emphasis>Manual</emphasis> provides specifications for
+	  flexural-torsional buckling in the Specification section,
+	  Section E3 (p. 16.1-28), and Appendix E3 (p. 16.1-94.
+	  Section E3 is specifically for double-angles and tee-shaped
+	  compression member whose elements have width-thickness
+	  ratios less than
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>λ</m:mi>
+		<m:mi>r</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>.
+	</para>
+	<para id="where2">
+	  Torsional variables can be found in the Dimensions and
+	  Properties section of the <emphasis>Manual</emphasis> in the
+	  first section.  Torsional properties start on page 1-89 and
+	  Flexural-torsional properties on page 1-96.
+	</para>
+      </section>
+
+      <section id="cg">
+	<title>Center of Gravity and Shear Center</title>
+	<definition id="cg1">
+	  <term>Shear center</term>
+	  <meaning id="idp13806704">
+	    "The shear center is that point through which the loads
+	    must act if there is to be no twisting, or torsion, of the
+	    beam."  <cite><cite-title>LRFD Steel Design Second Edition -- William
+	    T. Segui</cite-title></cite>
+	  </meaning>
+	</definition>
+	<para id="cg2">
+	  The shear center is always located on the axis of symmetry,
+	  therefore, if a member has two axes of symmetry, the shear
+	  center will be the intersection of the two axes.  Channels
+	  have a shear center that is not located on the member; the
+	  value,
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>e</m:mi>
+		<m:mn>0</m:mn>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  , tabulated in the <emphasis>Manual</emphasis> is the
+	  distance from the channel to the shear center.
+	</para>
+	<definition id="cg3">
+	  <term>Center of gravity</term>
+	  <meaning id="idp9643552">
+	    The center of gravity is the point at which all moments
+	    generated from the mass of the element equal
+	    zero.</meaning>
+	</definition>
+
+	<para id="cg4">
+	  For members like an I-shaped member, the center of gravity
+	  and the shear center are the exact same point where the two
+	  axes of symmetry intersect.  for channels, the shear center
+	  and the center of gravity are different, which creates a
+	  couple and makes the twisting that causes torsional
+	  buckling.
+	</para>
+      </section>   
+
+      <section id="e3">
+	<title>Design strength for double-angle and tee-shaped compression members</title>
+	<para id="e31">
+	  Double-angles and tee-shaped members with a width-thickness
+	  ratio less than
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>λ</m:mi>
+		<m:mi>r</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  should use the formula:
+	  <equation id="e34">
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>φ</m:mi>
+		    <m:mi>c</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:cn>0.85</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </equation>
+	  <equation id="e32">
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>P</m:mi>
+		    <m:mi>n</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>A</m:mi>
+		      <m:mi>g</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>F</m:mi>
+		      <m:mi>crft</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </equation>
+	</para>
+
+	<para id="e33">
+	  where the "ft" of
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>F</m:mi>
+		<m:mi>crft</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  stands for "flexural-torsional," and is expressed as:
+	  <equation id="e35">
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>F</m:mi>
+		    <m:mi>crft</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:apply>
+		    <m:divide/>
+		    <m:apply>
+		      <m:plus/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>F</m:mi>
+			  <m:mi>cry</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>F</m:mi>
+			  <m:mi>crz</m:mi>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		    <m:apply>
+		      <m:times/>
+		      <m:cn>2</m:cn>
+		      <m:ci>H</m:ci>
+		    </m:apply>
+		  </m:apply>
+		  <m:apply>
+		    <m:minus/>
+		    <m:cn>1</m:cn>
+		    <m:apply>
+		      <m:root/>
+		      <m:apply>
+			<m:minus/>
+			<m:cn>1</m:cn>
+			<m:apply>
+			  <m:divide/>
+			  <m:apply>
+			    <m:times/>
+			    <m:cn>4</m:cn>
+			    <m:ci>
+			      <m:msub>
+				<m:mi>F</m:mi>
+				<m:mi>cry</m:mi>
+			      </m:msub>
+			    </m:ci>
+			    <m:ci>
+			      <m:msub>
+				<m:mi>F</m:mi>
+				<m:mi>crz</m:mi>
+			      </m:msub>
+			    </m:ci>
+			    <m:ci>H</m:ci>
+			  </m:apply>
+			  <m:apply>
+			    <m:power/>
+			    <m:apply>
+			      <m:plus/>
+			      <m:ci>
+				<m:msub>
+				  <m:mi>F</m:mi>
+				  <m:mi>cry</m:mi>
+				</m:msub>
+			      </m:ci>
+			      <m:ci>
+				<m:msub>
+				  <m:mi>F</m:mi>
+				  <m:mi>crz</m:mi>
+				</m:msub>
+			      </m:ci>
+			    </m:apply>
+			    <m:cn>2</m:cn>
+			  </m:apply>
+			</m:apply>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </equation>
+	</para>
+	
+	<para id="e36">
+	  Here, 
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>F</m:mi>
+		<m:mi>crz</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  is expressed as:
+	  <equation id="e37">
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>F</m:mi>
+		    <m:mi>crz</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:divide/>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>G</m:ci>
+		    <m:ci>J</m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>A</m:ci>
+		    <m:apply>
+		      <m:power/>
+		      <m:apply>
+			<m:conjugate/>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>r</m:mi>
+			    <m:mn>0</m:mn>
+			  </m:msub>
+			</m:ci>
+		      </m:apply>
+		      <m:cn>2</m:cn>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>       
+	      </m:apply>
+	    </m:math>
+	  </equation>
+	</para>
+
+	<para id="e38">
+	  where
+	  <list id="e39">
+	    <item>
+	      <m:math>
+		<m:apply>
+		  <m:conjugate/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>r</m:mi>
+		      <m:mn>0</m:mn>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:math>
+	      = the polar radius of gyration about the shear center, in. 
+	    </item>
+	    <item>
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>G</m:ci>
+		  <m:apply>
+		    <m:divide/>
+		    <m:ci>E</m:ci>
+		    <m:apply>
+		      <m:times/>
+		      <m:cn>2</m:cn>
+		      <m:apply>
+			<m:plus/>
+			<m:cn>1</m:cn>
+			<m:ci>ϑ</m:ci>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	    </item>
+	    <item>
+	      <m:math>
+		<m:ci>J</m:ci>
+	      </m:math>
+	      = torsional stiffness
+	    </item>
+	    <item>
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>H</m:ci>
+		  <m:apply>
+		    <m:minus/>
+		    <m:cn>1</m:cn>
+		    <m:apply>
+		      <m:divide/>
+		      <m:apply>
+			<m:power/>
+			<m:ci>
+			  <m:msub>
+			    <m:mi>y</m:mi>
+			    <m:mn>0</m:mn>
+			  </m:msub>
+			</m:ci>
+			<m:cn>2</m:cn>
+		      </m:apply>
+		      <m:apply>
+			<m:power/>
+			<m:apply>
+			  <m:conjugate/>
+			  <m:ci>
+			    <m:msub>
+			      <m:mi>r</m:mi>
+			      <m:mn>0</m:mn>
+			    </m:msub>
+			  </m:ci>
+			</m:apply>
+			<m:cn>2</m:cn>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	    </item>
+	    <item>
+	      <m:math>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>y</m:mi>
+		    <m:mn>0</m:mn>
+		  </m:msub>
+		</m:ci>
+	      </m:math>
+	      = distance between shear center and centroid, in.
+	    </item>
+	    <item>
+	      <m:math>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>F</m:mi>
+		    <m:mi>cry</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:math>
+	      = equation given in Section E2 for flexural buckling
+	      about the y-axis of symmetry.
+	    </item>
+	  </list>  
+
+	</para>
+      </section>
+    </content>
+    
+  </document>

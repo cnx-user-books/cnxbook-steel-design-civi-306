@@ -1,0 +1,229 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Staggered Holes</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>fbdc3dd0-dc66-4b0f-8602-49ccc3c35557</md:uuid>
+</metadata>
+
+  <content>
+
+   <section id="intro">
+    <title>Failure due to Staggered Holes</title>
+    <para id="intro1">
+     When a member has staggered bolt holes, a different approach to finding
+     <m:math>
+      <m:ci>
+       <m:msub>
+        <m:mi>A</m:mi>
+        <m:mi>e</m:mi>
+       </m:msub>
+      </m:ci>
+     </m:math>
+     for the fracture limit state is taken.  This is because the
+     effective net area (<m:math><m:ci>t</m:ci></m:math> x
+     <m:math>
+      <m:ci>
+       <m:msub>
+        <m:mi>w</m:mi>
+        <m:mi>n</m:mi>
+       </m:msub>
+      </m:ci>
+     </m:math>
+     ) is different as the line of fracture changes due to the stagger
+     in the holes.  The test for the yielding limit state remains
+     unchanged (the gross area is still the same).
+    </para>
+   </section>
+
+   <section id="fline">
+    <title>Failure Lines</title>
+    <para id="fline1">
+     The net width now must account for the change in direction of the
+     line of fracture.  First, look at different ways a tension member
+     with staggered holes can fracture.  These pictures depict the
+     different lines of failure.  When analyzing a member like this,
+     it is important to find all the lines of failure and then
+     determine which line of failure is the weakest cross section.
+     That cross section will be taken as the net width,
+     <m:math>
+      <m:ci>
+       <m:msub>
+        <m:mi>w</m:mi>
+        <m:mi>n</m:mi>
+       </m:msub>
+      </m:ci>
+     </m:math>.
+    </para>
+
+    <figure id="fline2">
+     <media id="idp3033056" alt=""><image src="../../media/redline.bmp" mime-type="image/bmp"/></media>
+    </figure>
+   </section>
+
+   <section id="width">
+    <title>Net Width</title>
+    <para id="width1">
+     In order to find the net width, first the variables
+     <m:math><m:ci>s</m:ci></m:math> and <m:math><m:ci>g</m:ci></m:math>
+     must be known.  They are shown in <link target-id="width2"/>.
+    </para>
+
+    <figure id="width2">
+     <media id="idp2299744" alt=""><image src="../../media/sg.bmp" mime-type="image/bmp"/></media>
+    </figure>
+
+    <equation id="width3">
+     <m:math>
+      <m:apply>
+       <m:eq/>
+        <m:ci>
+         <m:msub>
+          <m:mi>w</m:mi>
+          <m:mi>n</m:mi>
+         </m:msub>
+        </m:ci>
+        <m:apply>
+         <m:minus/>
+          <m:ci>
+           <m:msub>
+            <m:mi>w</m:mi>
+            <m:mi>g</m:mi>
+           </m:msub>
+          </m:ci>
+          <m:apply>
+           <m:plus/>
+            <m:apply>
+             <m:times/>
+              <m:ci>N</m:ci>
+              <m:ci>
+               <m:msub>
+                <m:mi>φ</m:mi>
+                <m:mi>d</m:mi>
+               </m:msub>
+              </m:ci>
+            </m:apply>
+            <m:apply>
+             <m:divide/>
+		    <m:apply>
+		      <m:power/>
+		      <m:ci>s</m:ci>
+		      <m:cn>2</m:cn>
+		    </m:apply>
+		    <m:apply>
+		      <m:times/>
+		      <m:cn>4</m:cn>
+		      <m:ci>g</m:ci>
+		    </m:apply>
+            </m:apply>
+          </m:apply>
+        </m:apply>
+      </m:apply>
+     </m:math>
+    </equation>
+          
+    <list id="width4">
+     <title>where:</title>
+     <item>
+      <m:math>
+       <m:ci>
+        <m:msub>
+         <m:mi>w</m:mi>
+         <m:mi>n</m:mi>
+        </m:msub>
+       </m:ci>
+      </m:math>
+      = net width
+     </item>
+
+     <item>
+      <m:math>
+       <m:ci>
+        <m:msub>
+         <m:mi>w</m:mi>
+         <m:mi>g</m:mi>
+        </m:msub>
+       </m:ci>
+      </m:math>
+      = gross width
+     </item>
+
+     <item>
+      <m:math>
+       <m:apply>
+        <m:eq/>
+         <m:ci>
+          <m:msub>
+           <m:mi>φ</m:mi>
+           <m:mi>d</m:mi>
+          </m:msub>
+         </m:ci>
+         <m:apply>
+          <m:plus/>
+           <m:ci>
+            <m:msub>
+             <m:mi>φ</m:mi>
+             <m:mi>b</m:mi>
+            </m:msub>
+           </m:ci>
+           <m:apply>
+            <m:divide/>
+             <m:cn>1</m:cn>
+             <m:cn>16</m:cn>
+           </m:apply>
+           <m:apply>
+            <m:divide/>
+             <m:cn>1</m:cn>
+             <m:cn>16</m:cn>
+           </m:apply>
+         </m:apply>
+       </m:apply>
+      </m:math>
+      where:
+      <m:math>
+       <m:ci>
+        <m:msub>
+         <m:mi>φ</m:mi>
+         <m:mi>b</m:mi>
+        </m:msub>
+       </m:ci>
+      </m:math>
+       = diameter of the bolt
+     </item>
+
+     <item>
+     <m:math><m:ci>N</m:ci></m:math> = number of bolts in cross section
+     </item>
+
+     <item>
+      <m:math><m:ci>s</m:ci></m:math> = longitudinal center-to-center
+      spacing of any two consecutive holes, in.
+     </item>
+
+     <item>
+      <m:math><m:ci>g</m:ci></m:math> = transverse center-to-center
+     spacing between fastener gage lines, in.  </item>
+    
+     <item>
+      The term 
+	    <m:math>
+	      <m:apply>
+		<m:divide/>
+		<m:apply>
+		  <m:power/>
+		  <m:ci>s</m:ci>
+		  <m:cn>2</m:cn>
+		</m:apply>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>4</m:cn>
+		  <m:ci>g</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+      is added for every non-straight segment    
+     </item>
+    </list>
+
+   </section>  
+
+  </content>
+  
+</document>

@@ -1,0 +1,146 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Slenderness Ratio</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>bfd2f37e-0c8d-4f70-9d49-fc6d88a6d7aa</md:uuid>
+</metadata>
+
+    <content>
+      <section id="definition">
+	<title>Definition</title>
+	<definition id="slenderness">
+	  <term>Slenderness ratio</term>
+	  <meaning id="idp1667024">
+	    The ratio of the effective length of a column to the
+	    radius of gyration of the column, both with respect to the
+	    same axis of bending</meaning>
+	</definition>
+	<para id="cite1">
+	  <cite><cite-title>Manual of Steel Construction Third Edition --  AISC, 2001.</cite-title></cite>
+	</para>
+	
+	<para id="blank">
+	</para>
+	
+	<para id="mathform">
+	  In algebra form, the slenderness ratio is:
+	  <equation id="mathf">
+	    <m:math>
+	      <m:apply>
+		<m:divide/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>K</m:ci>
+		  <m:ci>L</m:ci>
+		</m:apply>
+		<m:ci>r</m:ci>
+	      </m:apply>
+	    </m:math>
+	  </equation>
+	</para>
+      </section>
+      
+      <section id="limits">
+	<title>More on the topic</title>
+	<para id="para1">
+	  The variable that governs 
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>F</m:mi>
+		<m:mi>cr</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  is the slenderness ratio.  The larger the slenderness ratio,
+	  the less strength there is in a column.  This means the
+	  capacity decreases as the slenderness ratio increases.
+	</para>
+	<para id="para2">
+	  The AISC recommendation from section <term>B7</term> are:
+	  <equation id="eq1">
+	    <m:math>
+	      <m:apply>
+		<m:leq/>
+		<m:apply>
+		  <m:divide/>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>K</m:ci>
+		    <m:ci>L</m:ci>
+		  </m:apply>
+		  <m:ci>r</m:ci>
+		</m:apply>
+		<m:cn>200</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </equation>
+	</para>
+	
+      </section>
+      
+      <section id="where">
+	<title>Where you see slenderness ratio</title>
+	<para id="where1">
+	  The slenderness ratio shows up when comparing the strength
+	  of columns and more specifically in the design strength
+	  formula variable,
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>λ</m:mi>
+		<m:mi>c</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>:
+	  
+	  <equation id="lambda"> 
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>λ</m:mi>
+		    <m:mi>c</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:apply>
+		    <m:divide/>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>K</m:ci>
+		      <m:ci>L</m:ci>
+		    </m:apply>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>r</m:ci>
+		      <m:pi/>
+		    </m:apply>
+		  </m:apply>
+		  <m:apply>
+		    <m:root/>
+		    <m:apply>
+		      <m:divide/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>F</m:mi>
+			  <m:mi>y</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>E</m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+		
+	      </m:apply>
+	    </m:math> 
+	  </equation>
+	</para>
+      </section>
+      
+    <para id="delete_me">
+       <!-- Insert module text here -->
+    </para>   
+  </content>
+  
+</document>

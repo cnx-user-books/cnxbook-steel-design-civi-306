@@ -1,0 +1,593 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Deriving Euler's equation</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>28974922-1537-447b-995d-8c43c149744b</md:uuid>
+</metadata>
+
+  <content>
+    <section id="section">
+      <title>Derivation of Euler's equation</title>
+
+      <para id="explain1">
+	Start with the differential equation giving the deflected shape
+	of an elastic member subjected to bending.
+      </para>
+
+      <equation id="derive1">
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci>M</m:ci>
+	    <m:apply>
+	      <m:minus/>
+	      <m:apply>
+		<m:times/>
+		<m:ci>E</m:ci>
+		<m:ci>I</m:ci>
+		<m:apply>
+		  <m:diff/>
+		  <m:degree>
+		    <m:cn>2</m:cn>
+		  </m:degree>
+		  <m:ci>y</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>P</m:ci>
+	      <m:ci>y</m:ci>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+      </equation> 
+      
+      <para id="explain2">
+	Set equal to zero.
+      </para>
+
+      <equation id="derive2">
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+		<m:times/>
+		<m:ci>E</m:ci>
+		<m:ci>I</m:ci>
+		<m:apply>
+		  <m:diff/>
+		  <m:degree>
+		    <m:cn>2</m:cn>
+		  </m:degree>
+		  <m:ci>y</m:ci>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:ci>P</m:ci>
+		<m:ci>y</m:ci>
+	      </m:apply>
+	    </m:apply>
+	    <m:cn>0</m:cn>
+	  </m:apply>
+	</m:math>
+      </equation>
+
+      <para id="explain3">
+	Divide everything by 
+	<m:math>
+	  <m:apply>
+	    <m:times/>
+	    <m:ci>E</m:ci>
+	    <m:ci>I</m:ci>
+	  </m:apply>
+	</m:math>.
+      </para>
+      
+      <equation id="derive3">
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+		<m:diff/>
+		<m:degree>
+		  <m:cn>2</m:cn>
+		</m:degree>
+		<m:ci>y</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:apply>
+		  <m:divide/>
+		  <m:ci>P</m:ci>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>E</m:ci>
+		    <m:ci>I</m:ci>
+		  </m:apply>
+		</m:apply>
+		<m:ci>y</m:ci>
+	      </m:apply> 
+	    </m:apply>
+	    <m:cn>0</m:cn>
+	  </m:apply>
+	</m:math>
+      </equation>
+
+      <para id="explain4">
+	Set the variable, 
+	<m:math>
+	  <m:apply>
+	    <m:power/>
+	    <m:ci>α</m:ci>
+	    <m:ci>2</m:ci>
+	  </m:apply>
+	</m:math>
+      </para>
+
+      <equation id="derive4">
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:power/>
+	      <m:ci>α</m:ci>
+	      <m:cn>2</m:cn>
+	    </m:apply>
+	    <m:apply>
+	      <m:divide/>
+	      <m:ci>P</m:ci>
+	      <m:apply>
+		<m:times/>
+		<m:ci>E</m:ci>
+		<m:ci>I</m:ci>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+      </equation>
+
+      <para id="explain4.5">
+	then, plug that in to get:
+      </para>
+
+      <equation id="derive4.5">
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:plus/>
+	      <m:apply>
+		<m:diff/>
+		<m:degree>
+		  <m:cn>2</m:cn>
+		</m:degree>
+		<m:ci>y</m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:apply>
+		  <m:power/>
+		  <m:ci>α</m:ci>
+		  <m:cn>2</m:cn>
+		</m:apply>
+		<m:ci>y</m:ci>
+	      </m:apply>           
+	    </m:apply>
+	    <m:cn>0</m:cn>
+	  </m:apply>
+	</m:math>
+      </equation>
+
+    <para id="explain5">
+	Since this is a second order, linear, ordinary differential
+	equation with constant coefficients, it solves to:
+      </para>
+
+      <equation id="derive5">
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci>y</m:ci>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>A</m:ci>
+	      <m:apply>
+		<m:sin/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>α</m:ci>
+		  <m:ci>x</m:ci>
+		</m:apply>
+	      </m:apply> 
+	    </m:apply>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>B</m:ci>
+	      <m:apply>
+		<m:cos/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>α</m:ci>
+		  <m:ci>x</m:ci>
+		</m:apply>
+	      </m:apply> 
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+      </equation>
+
+      <para id="explain6">
+	Take the boundary condition that 
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci>x</m:ci>
+	    <m:cn>0</m:cn>
+	  </m:apply>
+	</m:math> and 
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci>y</m:ci>
+	    <m:cn>0</m:cn>
+	  </m:apply>
+	</m:math> to solve for
+	<m:math>
+	  <m:ci>B</m:ci>
+	</m:math>
+      </para>
+
+      <equation id="deriv6">
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">y</m:ci>
+	      <m:cn>0</m:cn>
+	    </m:apply>
+	    <m:cn>0</m:cn>
+	    <m:apply>
+	      <m:ci type="fn">A</m:ci>
+	      <m:cn>0</m:cn>
+	    </m:apply>
+	    <m:apply>
+	      <m:ci type="fn">B</m:ci>
+	      <m:cn>1</m:cn>
+	    </m:apply> 
+	  </m:apply>
+	</m:math>
+      </equation>
+
+      <equation id="derive7">
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci>B</m:ci>
+	    <m:cn>0</m:cn>
+	  </m:apply>
+	</m:math>
+      </equation>
+
+      <para id="explain8">
+	Now, take the boundary conditions 
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci>x</m:ci>
+	    <m:ci>L</m:ci>
+	  </m:apply>
+	</m:math> and 
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci>y</m:ci>
+	    <m:cn>0</m:cn>
+	  </m:apply>
+	</m:math>.
+      </para>  
+
+      <equation id="deriv8">
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:ci type="fn">y</m:ci>
+	      <m:ci>L</m:ci>
+	    </m:apply>
+	    <m:cn>0</m:cn>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>A</m:ci>
+	      <m:apply>
+		<m:sin/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>α</m:ci>
+		  <m:ci>L</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+      </equation>
+
+      <para id="explain9">
+	Since 
+	<m:math>
+	  <m:ci>A</m:ci>
+	</m:math> cannot equal zero:
+      </para>
+
+      <equation id="derive9">
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:sin/>
+	      <m:apply>
+		<m:times/>
+		<m:ci>α</m:ci>
+		<m:ci>L</m:ci>
+	      </m:apply>
+	    </m:apply>
+	    <m:cn>0</m:cn>
+	  </m:apply>
+	</m:math>
+      </equation>
+
+      <para id="explain10">
+	Take the sine inverse of both sides, and
+	<m:math>
+	  <m:apply>
+	    <m:times/>
+	    <m:ci>α</m:ci>
+	    <m:ci>L</m:ci>
+	  </m:apply>
+	</m:math>
+	can be 0, 
+	<m:math>
+	  <m:pi/>
+	</m:math>, 
+	<m:math>
+	  <m:apply>
+	    <m:times/>
+	    <m:cn>2</m:cn>
+	    <m:pi/>
+	  </m:apply>
+	</m:math>, etc.  So...
+      </para>
+
+      <equation id="derive10">
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>α</m:ci>
+	      <m:ci>L</m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:times/>
+	      <m:ci>n</m:ci>
+	      <m:pi/>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+      </equation>
+
+      <para id="explain11">
+	Solve for
+	<m:math>
+	  <m:apply>
+	    <m:power/>
+	    <m:ci>α</m:ci>
+	    <m:cn>2</m:cn>
+	  </m:apply>
+	</m:math>
+      </para>
+
+      <equation id="derive11">
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:apply>
+	      <m:power/>
+	      <m:ci>α</m:ci>
+	      <m:cn>2</m:cn>
+	    </m:apply>
+	    <m:apply>
+	      <m:divide/>
+	      <m:apply>
+		<m:times/>
+		<m:apply>
+		  <m:power/>
+		  <m:ci>n</m:ci>
+		  <m:cn>2</m:cn>
+		</m:apply>
+		<m:apply>
+		  <m:power/>
+		  <m:pi/>
+		  <m:cn>2</m:cn>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:power/>
+		<m:ci>L</m:ci>
+		<m:cn>2</m:cn>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+      </equation>
+
+      <para id="explain12">
+	Set the two
+	<m:math>
+	  <m:apply>
+	    <m:power/>
+	    <m:ci>α</m:ci>
+	    <m:cn>2</m:cn>
+	  </m:apply>
+	</m:math>'s equal and solve for 
+	<m:math>
+	  <m:ci>P</m:ci>
+	</m:math>.
+      </para>
+
+      <equation id="derive12">
+	<m:math display="block">
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci><m:msub>
+		<m:mi>P</m:mi>
+		<m:mi>cr</m:mi>
+	      </m:msub></m:ci>
+	    <m:apply>
+	      <m:divide/>
+	      <m:apply>
+		<m:times/>
+		<m:apply>
+		  <m:power/>
+		  <m:ci>n</m:ci>
+		  <m:cn>2</m:cn>
+		</m:apply>
+		<m:apply>
+		  <m:power/>
+		  <m:pi/>
+		  <m:cn>2</m:cn>
+		</m:apply>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>E</m:ci>
+		  <m:ci>I</m:ci>
+		</m:apply>
+	      </m:apply>
+	      <m:ci>L</m:ci>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+      </equation>
+
+      <para id="explain14">
+	Assume that 
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci>n</m:ci>
+	    <m:cn>1</m:cn>
+	  </m:apply>
+	</m:math>
+      </para>
+
+      <para id="explain14.5">
+	Now we can solve for 
+	<m:math>
+	  <m:ci><m:msub>
+	      <m:mi>F</m:mi>
+	      <m:mi>cr</m:mi>
+	    </m:msub></m:ci>
+	</m:math> using this equation.
+      </para> 
+
+      <equation id="derive14">
+	<m:math display="block">
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci><m:msub>
+		<m:mi>F</m:mi>
+		<m:mi>cr</m:mi>
+	      </m:msub></m:ci>
+	    <m:apply>
+	      <m:divide/>
+	      <m:ci><m:msub>
+		  <m:mi>P</m:mi>
+		  <m:mi>cr</m:mi>
+		</m:msub></m:ci>
+	      <m:ci><m:msub>
+		  <m:mi>A</m:mi>
+		  <m:mi>g</m:mi>
+		</m:msub></m:ci>
+	    </m:apply>
+	    <m:apply>
+	      <m:times/>
+	      <m:apply>
+		<m:divide/>
+		<m:apply>
+		  <m:times/>
+		  <m:apply>
+		    <m:power/>
+		    <m:pi/>
+		    <m:cn>2</m:cn>
+		  </m:apply>
+		  <m:ci>E</m:ci>
+		</m:apply>
+		<m:apply>
+		  <m:power/>
+		  <m:ci>L</m:ci>
+		  <m:cn>2</m:cn>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>          
+		<m:divide/>
+		<m:ci>I</m:ci>
+		<m:ci>A</m:ci>
+	      </m:apply>
+	    </m:apply>
+	    <m:apply>
+	      <m:divide/>
+	      <m:apply>
+		<m:times/>
+		<m:apply>
+		  <m:power/>
+		  <m:pi/>
+		  <m:cn>2</m:cn>
+		</m:apply>
+		<m:ci>E</m:ci>
+		<m:apply>
+		  <m:power/>
+		  <m:ci>r</m:ci>
+		  <m:cn>2</m:cn>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:power/>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>k</m:ci>
+		  <m:ci>L</m:ci>
+		</m:apply>
+		<m:cn>2</m:cn>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+      </equation>
+
+      <para id="explain15">
+	where:
+      </para>
+
+      <equation id="derive15">
+	<m:math>
+	  <m:apply>
+	    <m:eq/>
+	    <m:ci>r</m:ci>
+	    <m:apply>
+	      <m:root/>
+	      <m:apply>
+		<m:divide/>
+		<m:ci>I</m:ci>
+		<m:ci>A</m:ci>
+	      </m:apply>
+	    </m:apply>
+	  </m:apply>
+	</m:math>
+      </equation>
+    </section>
+  </content>
+  
+</document>

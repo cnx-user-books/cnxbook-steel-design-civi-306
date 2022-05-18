@@ -1,0 +1,386 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Equations for P</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>48829857-5828-47fb-aa5f-e2b21bedb4bc</md:uuid>
+</metadata>
+
+    <content>
+
+      <section id="p">
+	<title>What is P?</title>
+	<para id="what">
+	  The abbreviation, <m:math><m:ci>P</m:ci></m:math>, is used to
+	  describe the axial load on a member.
+	</para>
+      </section>
+      
+      <section id="aisc">
+	<title>Basic requirements</title>
+	<para id="basic">
+	  The basic requirements for compression members are covered
+	  in Chapter E of the AISC Specification (page 16.1-27).  The
+	  relationship between loads and strength takes the form:
+	  <equation id="eq1">
+	    <m:math>
+	      <m:apply>
+		<m:leq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>P</m:mi>
+		    <m:mi>u</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>φ</m:mi>
+		      <m:mi>c</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>P</m:mi>
+		      <m:mi>n</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </equation>
+
+	  where:
+	  <list id="list1">
+	    <item>
+	      <m:math>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>P</m:mi>
+		    <m:mi>u</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:math>
+	      = sum of factored loads
+	    </item>
+	    <item>
+	      <m:math>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>P</m:mi>
+		    <m:mi>n</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:math>
+	      = nominal compressive strength 
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>A</m:mi>
+			<m:mi>g</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>F</m:mi>
+			<m:mi>cr</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	    </item>  
+	    <item>
+	      <m:math>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>F</m:mi>
+		    <m:mi>cr</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:math>
+	      = critical buckling stress
+	    </item>
+	    <item>
+	      <m:math>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>φ</m:mi>
+		    <m:mi>c</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:math>
+	      = resistance factor for compression members = 0.85
+	    </item>
+	  </list>
+	</para>
+      </section>
+
+      <section id="section2">
+	<title>Design strength equation</title>
+	<para id="design">
+	  The design strength equation, 
+
+	  <equation id="eq11">
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>P</m:mi>
+		    <m:mi>n</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>A</m:mi>
+		      <m:mi>g</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>F</m:mi>
+		      <m:mi>cr</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </equation>
+
+	  has the variable 
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>F</m:mi>
+		<m:mi>cr</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  which is a function of 
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>λ</m:mi>
+		<m:mi>c</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  , the slenderness parameter.  
+
+	  The equation for
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>λ</m:mi>
+		<m:mi>c</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  is:
+
+	  <equation id="eq"> 
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>λ</m:mi>
+		    <m:mi>c</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:apply>
+		    <m:divide/>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>K</m:ci>
+		      <m:ci>l</m:ci>
+		    </m:apply>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>r</m:ci>
+		      <m:pi/>
+		    </m:apply>
+		  </m:apply>
+		  <m:apply>
+		    <m:root/>
+		    <m:apply>
+		      <m:divide/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>F</m:mi>
+			  <m:mi>y</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>E</m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	    </m:math> 
+	  </equation>
+
+	  The equation for 
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>F</m:mi>
+		<m:mi>cr</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  , then depends on the value of 
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>λ</m:mi>
+		<m:mi>c</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  .  For instance:
+
+	  <list id="lambdac">
+	    <item>
+	      For
+	      <m:math>
+		<m:apply>
+		  <m:leq/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>λ</m:mi>
+		      <m:mi>c</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:cn>1.5</m:cn>
+		</m:apply>
+	      </m:math>
+
+	      <equation id="fcr1">
+		<m:math>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>F</m:mi>
+			<m:mi>cr</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:apply>
+		      <m:times/>
+		      <m:apply>
+			<m:power/>
+			<m:ci>0.658</m:ci>
+			
+			<m:apply>
+			  <m:power/>
+			  <m:ci>
+			    <m:msub>
+			      <m:mi>λ</m:mi>
+			      <m:mn>c</m:mn>
+			    </m:msub>
+			  </m:ci>
+			  <m:cn>2</m:cn>
+			</m:apply>
+			
+		      </m:apply>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>F</m:mi>
+			  <m:mi>y</m:mi>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:math>
+	      </equation>
+	    </item>
+
+	    <item>
+	      For
+	      <m:math>
+		<m:apply>
+		  <m:gt/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>λ</m:mi>
+		      <m:mi>c</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:cn>1.5</m:cn>
+		</m:apply>
+	      </m:math>
+
+	      <equation id="fcr2">
+		<m:math>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>F</m:mi>
+			<m:mi>cr</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:apply>
+		      <m:times/>
+		      
+		      <m:apply>
+			<m:divide/>
+			<m:cn>0.877</m:cn>
+			<m:apply>
+			  <m:power/>
+			  <m:ci>
+			    <m:msub>
+			      <m:mi>λ</m:mi>
+			      <m:mi>c</m:mi>
+			    </m:msub>
+			  </m:ci>
+			  <m:cn>2</m:cn>
+			</m:apply>
+		      </m:apply>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>F</m:mi>
+			  <m:mi>y</m:mi>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:math>
+	      </equation>
+	    </item> 
+	  </list>    
+
+	</para>
+      </section>
+
+      <section id="section3">
+	<title>Slenderness parameter</title>
+	<para id="sp">
+	  The slenderness parameter incorporates the material
+	  properties.  If it is less than 1.5, the compression member
+	  is said to be elastic.  Then, if the value is over 1.5,
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>F</m:mi>
+		<m:mi>cr</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  must be reduced to account for the effects of initial crookedness. 
+	</para>
+	<para id="delete">
+	  Put in figure p96.
+	</para>
+      </section>    
+
+    </content>
+    
+  </document>

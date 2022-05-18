@@ -1,0 +1,247 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+    <title>Effective Length and Frames</title>
+    <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>e2a2bf3b-85f3-4068-a380-442ade3f8d96</md:uuid>
+</metadata>
+
+    <content>
+
+      <section id="diff">
+	<title>A different effective length for frames</title>
+	<para id="diff1">
+	  Effective length can be found easily on isolated columns by
+	  using Table C-C2 in the Commentary of the Specification
+	  Section of the <emphasis>Manual</emphasis>.  However, this
+	  table will not work very well with rigid frames.  Columns in
+	  a frame are not independent, they are continuous.  The
+	  buckling of one member will affect all the members around
+	  it.  Therefore, the end conditions necessary for using Table
+	  C-C2 are not sufficient.  It is important to account for the
+	  degree of restraint by connecting members of a column in a
+	  frame.
+	</para>
+
+	<para id="diff2">
+	  A frame can be unbraced or braced, where unbraced means
+	  horizontal displacement in possible.  A frame can also have
+	  sidesway.
+	</para>
+	
+	<para id="diff3">
+	  "The rotational restraint provided by beams, or girders, at
+	  the end of a column is a function of rotational stiffnesses
+	  of the members intersecting at the joint."  <cite><cite-title>LRFD Steel
+	  Design Second Edition -- William T. Segui, 1999.</cite-title></cite> The
+	  restraint is proportional to
+	  <m:math>
+	    <m:apply>
+	      <m:divide/>
+	      <m:apply>
+		<m:times/>
+		<m:ci>E</m:ci>
+		<m:ci>I</m:ci>
+	      </m:apply>
+	      <m:ci>L</m:ci>
+	    </m:apply>
+	  </m:math>.
+	</para>
+	
+	<equation id="G">
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+	      <m:ci>G</m:ci>
+	      <m:apply>
+		<m:divide/>
+		<m:apply>
+		  <m:sum/>
+		  <m:apply>
+		    <m:divide/>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>E</m:mi>
+			  <m:mi>c</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>I</m:mi>
+			  <m:mi>c</m:mi>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>L</m:mi>
+			<m:mi>c</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		</m:apply>
+		<m:apply>
+		  <m:sum/>
+		  <m:apply>
+		    <m:divide/>
+		    <m:apply>
+		      <m:times/>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>E</m:mi>
+			  <m:mi>g</m:mi>
+			</m:msub>
+		      </m:ci>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>I</m:mi>
+			  <m:mi>g</m:mi>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>L</m:mi>
+			<m:mi>g</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	      <m:apply>
+		<m:divide/>
+		<m:apply>
+		  <m:sum/>
+		  <m:apply>
+		    <m:divide/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>I</m:mi>
+			<m:mi>c</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>L</m:mi>
+			<m:mi>c</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		</m:apply>
+		<m:apply>
+		  <m:sum/>
+		  <m:apply>
+		    <m:divide/>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>I</m:mi>
+			<m:mi>g</m:mi>
+		      </m:msub>
+		    </m:ci>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>L</m:mi>
+			<m:mi>g</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:apply> 
+	    </m:apply>
+	  </m:math>
+	</equation>
+        
+	
+	<para id="diff4">
+	  <m:math><m:ci>K</m:ci></m:math>, then depends on the ratio
+	  of column stiffness to the girder stiffness at each end.
+	</para>
+      </section>
+
+      <section id="relationships">
+	<title>G and K relationships</title>
+	<para id="rel1">
+	  <m:math><m:ci>K</m:ci></m:math> is relatively small when a
+	  slender column is connected to a girder of large cross
+	  section.  This is because the girder effectively prevents
+	  rotation and acts as a fixed end.  The
+	  <m:math><m:ci>G</m:ci></m:math> value for this case is
+	  rather small too.  <m:math><m:ci>K</m:ci></m:math> (or
+	  <m:math><m:ci>G</m:ci></m:math>) is relatively large when
+	  the ends of very stiff columns are connected to rather
+	  flexible beams.  This is because the ends of the column can
+	  more freely rotate and approach the pinned condition.
+	</para>
+	
+	<para id="rel2">
+	  "The relationship between <m:math><m:ci>G</m:ci></m:math>
+	  and <m:math><m:ci>K</m:ci></m:math> has been quantified in
+	  the Jackson-Mooreland Alignment Charts (Johnston, 1796),
+	  which are reproduced in Figure C-C2.2 in the Commentary.  To
+	  obtain a value of <m:math><m:ci>K</m:ci></m:math> from one
+	  of the nomograms, first calculate the value of
+	  <m:math><m:ci>G</m:ci></m:math> at each end of the column,
+	  letting one value be
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>G</m:mi>
+		<m:mi>A</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  and the other be 
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>G</m:mi>
+		<m:mi>B</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  .  Connect
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>G</m:mi>
+		<m:mi>A</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  and 
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>G</m:mi>
+		<m:mi>B</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  with a straight line, and read the value of
+	  <m:math><m:ci>K</m:ci></m:math> on the middle scale.  The
+	  effective length factor obtained in this manner is with
+	  respect to the axis of bending, which is the axis
+	  perpendicular to the plane of the frame.  A separate
+	  analysis must be made for buckling about the other axis.
+	  Normally the beam-to-column connections in this direction
+	  will not transmit moment, sidesway is prevented by bracing,
+	  and <m:math><m:ci>K</m:ci></m:math> can be taken as 1.0.
+	</para>
+      </section>
+
+      <section id="connect">
+	<title>Value of G for pinned support</title>
+	<para id="con1">
+	  <m:math><m:ci>G</m:ci></m:math> can be taken as 10 at a
+	  pinned support because at a pin connection, the situation is
+	  just like a very stiff column attached to infinitely
+	  flexible girders.  This means the girders have zero
+	  stiffness.  Then, the ratio of column stiffness to girder
+	  stiffness would be infinite for a perfectly frictionless
+	  hinge.  This end condition can only be approximated in
+	  practice, so the discussion accompanying the alignment chart
+	  recommends that <m:math><m:ci>G</m:ci></m:math> be taken as 10.
+	</para>
+      </section>
+    </content>
+    
+  </document>

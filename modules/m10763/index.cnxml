@@ -1,0 +1,113 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+    <title>Serviceability</title>
+    <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>bb20d498-4b11-440c-9ada-261a8e3996e7</md:uuid>
+</metadata>
+
+    <content>
+      <section id="intro">
+	<title>Introduction to Serviceability</title>
+	<para id="intro1">
+	  The final limit state for beams is serviceability.  "A
+	  serviceable structure is one that performs satisfactorily,
+	  not causing any discomfort or perceptions of unsafety for
+	  the occupants or users of the structure" <cite><cite-title>LRFD Steel
+	  Design Second Edition -- William T. Segui</cite-title></cite>.  A beam is
+	  serviceable when it satisfies certain deflection limits.
+	  This is so there are no visible sags or deflections that
+	  lead to a flexible beam.  If the beam is too flexible, it
+	  could have a problem with vibrations.
+	</para>
+
+      </section>
+
+      <section id="deflection">
+	<title>Deflection limits</title>
+	<para id="deflection1">
+	  The deflection of a beam depends on the loading and support
+	  conditions.  A list of deflection formulas can be found in
+	  Part 5 of the <emphasis>Manual</emphasis> starting on page
+	  5-162.  After finding the deflection for the beam in
+	  question, compare it to the maximum allowable total (service
+	  dead load plus service live load) deflections.  These are
+	  dependent on the function of the beam.
+	</para>
+
+	<list id="deflection2">
+	  <item>
+	    Plastered construction:
+	    <equation id="deflection3">
+	      <m:math> 
+		<m:apply>
+		  <m:divide/>
+		  <m:ci>L</m:ci>
+		  <m:cn>360</m:cn>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	  </item>
+	  <item>
+	    Unplastered floor construction:
+	    <equation id="deflection4">
+	      <m:math> 
+		<m:apply>
+		  <m:divide/>
+		  <m:ci>L</m:ci>
+		  <m:cn>240</m:cn>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	  </item>
+	  <item>
+	    Unplastered roof construction:
+	    <equation id="deflection5">
+	      <m:math> 
+		<m:apply>
+		  <m:divide/>
+		  <m:ci>L</m:ci>
+		  <m:cn>180</m:cn>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	  </item>
+	</list>
+	
+	<para id="deflection6">
+	  where, <m:math><m:ci>L</m:ci></m:math> is the span length.
+	</para>
+
+	<figure id="deflection7">
+	  <media id="idp6474672" alt=""><image src="../../media/simplebeam.bmp" mime-type="image/bmp"/></media>
+	  <caption>
+	    An example of a deflection on a simply supported beam.
+	    Here,
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>Δ</m:ci>
+		<m:apply>
+		  <m:divide/>
+		  <m:apply>
+		    <m:times/>
+		    <m:ci>P</m:ci>
+		    <m:apply>
+		      <m:power/>
+		      <m:ci>L</m:ci>
+		      <m:cn>3</m:cn>
+		    </m:apply>
+		  </m:apply>
+		  <m:apply>
+		    <m:times/>
+		    <m:cn>48</m:cn>
+		    <m:ci>E</m:ci>
+		    <m:ci>I</m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	    at the point of the load.</caption>
+	</figure>
+      </section>
+      
+    </content>
+    
+  </document>

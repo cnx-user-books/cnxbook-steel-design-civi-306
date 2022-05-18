@@ -1,0 +1,82 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+    <title>Introduction to Beams</title>
+    <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>c0858ffd-11ae-49c1-998f-1338de561446</md:uuid>
+</metadata>
+
+    <content>
+      <section id="intro">
+	<title>Introduction</title>
+	<para id="intro1">
+	  In order to design a beam in accordance with the AISC code
+	  for steel design, 6 limit states must be considered.  These
+	  are yielding, Lateral-Torsional Buckling, Web Local
+	  Buckling, Flange Local Buckling, Shear Capacity, and
+	  Serviceability.  Only when a beam satisfies these limit
+	  states can it be considered safe for public use.
+	</para>
+      </section>
+
+      <section id="limitstate">
+	<title>The six limit states</title>
+	<list id="limitstate1">
+	  <item>
+	    <term>Yielding</term> is the most common limit state and
+	    the first to address.  It refers to the strength of the
+	    beam to resist the largest possible moment that can be
+	    applied to the beam.  Basically, it limits the beam from
+	    bending.  Yielding depends on the load, the supports, the
+	    span of the beam, and the strength of the steel.
+	  </item>
+
+	  <item>
+	    <term>Lateral-Torsional Buckling</term>, the second limit
+	    state refers to the beam's ability to hold up against
+	    torsion, or twisting in the lateral direction. This limit
+	    state compares the lateral bracing to a maximum allowable
+	    bracing length.  With adequate bracing, the beam will not
+	    twist into failure.
+	  </item>
+
+	  <item>
+	    The third limit state, <term>Web Local Buckling</term>
+	    refers to the strength of the web of a member in a beam to
+	    resist failure.  Basically, the width and thickness of the
+	    web must be large enough to withstand the loading
+	    conditions.  This means the width-thickness ratio must
+	    fall between certain limits so the web does not collapse
+	    or fail.
+	  </item>
+
+	  <item>
+	    The fourth limit state, <term>Flange Local
+	    Buckling</term>, is just like Web Local Buckling, except
+	    the limits are for the flanges of a member in a beam.  It
+	    refers to the strength of the flange of a member to resist
+	    failure.  The width and thickness of the flange must be
+	    large enough to withstand the loading conditions.  This
+	    means the width-thickness ratio must fall between certain
+	    limits so the flange does not collapse or fail.
+	  </item>
+
+	  <item>
+	    <term>Shear Capacity</term>, the fifth limit state,
+	    usually is not the controlling limit state, except for
+	    beams with very small lateral spans.  The shear in the web
+	    of a beam must be limited so it does not exceed the
+	    maximum allowable shear.
+	  </item>
+
+	  <item>
+	    <term>Serviceability</term>, the final limit state, refers
+	    to the beam's deflection. The beam must be serviceable and
+	    not deflect so much that vibrations can be a problem and
+	    should not deflect to a noticeable angle that people can
+	    detect and feel uncomfortable with.
+	  </item>
+	</list>
+	
+      </section>
+      
+    </content>
+    
+  </document>

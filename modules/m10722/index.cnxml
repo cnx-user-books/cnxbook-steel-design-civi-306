@@ -1,0 +1,308 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Width Thickness Ratio</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>f82c5c36-a01c-419e-81d9-26d8e443a0c1</md:uuid>
+</metadata>
+
+    <content>
+      <para id="useE2">
+	In order to use section E2 (page 16.1-27) of the
+	<emphasis>Manual</emphasis>, the width-thickness ratios must
+	be less than
+	<m:math>
+	  <m:ci>
+	    <m:msub>
+	      <m:mi>λ</m:mi>
+	      <m:mi>r</m:mi>
+	    </m:msub>
+	  </m:ci>
+	</m:math>
+	This means the member is slender.
+      </para>
+
+      <section id="wtr">
+	<title>Width Thickness Ratio</title>
+
+	<para id="compact">
+	  For compact members:
+	  <m:math>
+	    <m:apply>
+	      <m:leq/>
+	      <m:apply>
+		<m:divide/>
+		<m:ci>b</m:ci>
+		<m:ci>t</m:ci>
+	      </m:apply>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>λ</m:mi>
+		  <m:mi>p</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:apply>
+	  </m:math>
+	  
+	  .  For non-compact members:
+	  <m:math>
+	    <m:apply>
+	      <m:leq/>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>λ</m:mi>
+		  <m:mi>p</m:mi>
+		</m:msub>
+	      </m:ci>
+	      <m:apply>
+		<m:divide/>
+		<m:ci>b</m:ci>
+		<m:ci>t</m:ci>
+	      </m:apply>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>λ</m:mi>
+		  <m:mi>r</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:apply>
+	  </m:math>.
+	</para>  
+
+	<para id="variables">
+	  In this case, 
+	  <m:math>
+	    <m:apply>
+	      <m:divide/>
+	      <m:ci>b</m:ci>
+	      <m:ci>t</m:ci>
+	    </m:apply>
+	  </m:math>
+	  is the Width Thickness Ratio.  The specifications for the
+	  widths of different shaped members,
+	  <m:math><m:ci>b</m:ci></m:math> can be found on page 16.1-12
+	  of the <emphasis>Manual</emphasis>.  The
+	  <emphasis>t</emphasis> refers to the thickness of the
+	  member.  Also, on pages 16.1-14 and 16.1-15, you will find
+	  the Limiting Width-Thickness Ratios for Compression Elements
+	  tables.  These tables will give the an equation for
+	  <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>λ</m:mi>
+		  <m:mi>p</m:mi>
+		</m:msub>
+	      </m:ci>
+	  </m:math>
+	  (compact) and for
+	  <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>λ</m:mi>
+		  <m:mi>r</m:mi>
+		</m:msub>
+	      </m:ci>
+	  </m:math>
+	  (non-compact) depending on a description of the element.
+	</para>
+      </section>
+
+      <section id="stiff">
+	<title>Stiffness</title>
+	<para id="stiffness">
+	  "Two types of elements must be considered: unstiffened
+	  elements, which are unsupported along one edge parallel to
+	  the direction of the load, and stiffened elements, which are
+	  supported along both edges."  <cite><cite-title>LRFD Steel Design Second
+	  Edition: William T. Segui, 1999</cite-title></cite>
+	</para>
+	
+	<para id="examples">
+	  For example, an L-shaped member has two unstiffened elements
+	  because each member is only supported (or connected) at one
+	  end.  Also, a C-shaped member has two unstiffened elements
+	  and one stiffened element.  The web is stiffened because it
+	  is supported on both sides as opposed to the flanges which
+	  are unstiffened .  </para>
+
+	<exercise id="imember">
+	  <problem id="idp635456">
+	    <para id="imember1">
+	      How many unstiffened and stiffened elements would an
+	      I-shaped member have?
+	    </para>
+	  </problem>
+	  <solution id="idm7622048">
+	    <para id="imember2">
+	      Four unstiffened elements (the flanges) and one
+	      stiffened element (the web).  In this case, each half of
+	      one of the flanges consists of two elements joined at
+	      the web.  </para>
+	  </solution>
+	</exercise>
+      </section>
+
+      <section id="B5">
+	<title>B5: Local Buckling</title>
+	<para id="bandt">
+	  One example of using the section B5: LOCAL BUCKLING
+	  1. Classification of Steel Sections on page 16.1-12 in the
+	  AISC Steel Manual is with an I-shaped member.  Since the
+	  flanges are unstiffed, and it is I-shaped, use a width,
+	  <m:math><m:ci>b</m:ci></m:math>, from part (a).  Therefore,
+	  <m:math><m:ci>b</m:ci></m:math> can be taken as half the
+	  full-flange width,
+	  <m:math>
+	    <m:apply>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>b</m:mi>
+		  <m:mi>f</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:apply>
+	  </m:math>
+	  .  This means the Width Thickness Ratio is:
+	  <m:math>
+	    <m:apply>
+	      <m:divide/>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>b</m:mi>
+		  <m:mi>f</m:mi>
+		</m:msub>
+	      </m:ci>
+	      <m:ci>t</m:ci>
+	    </m:apply>
+	  </m:math>.  Then, since the web is a stiffened element, use
+	  part (a) of the stiffened elements section and use the
+	  distance <m:math><m:ci>h</m:ci></m:math> for the "width."
+	  This gives the Width Thickness Ratio as:
+	  <m:math>
+	    <m:apply>
+	      <m:divide/>
+	      <m:ci>h</m:ci>
+	      <m:ci>t</m:ci>
+	    </m:apply>
+	  </m:math>.
+	</para> 
+      </section>
+
+      <section id="easy">
+	<title>Values for Width Thickness Ratio</title>
+	<para id="easy1">
+	  An easy way of finding values for 
+	  <m:math>
+	    <m:apply>
+	      <m:divide/>
+	      <m:ci>b</m:ci>
+	      <m:ci>t</m:ci>
+	    </m:apply>
+	  </m:math>
+	  can be found on page 16.1-150.  Here, Table 6: Slenderness
+	  Ratios of Elements as a Function of
+	  <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>F</m:mi>
+		  <m:mi>y</m:mi>
+		</m:msub>
+	      </m:ci>
+	  </m:math>
+	  From Table B5.1, gives values for the ratios that are given
+	  in formula form in Table B5.1 (16.1-14).  This is useful in
+	  cutting back on calculating errors.
+	</para>
+	<para id="easy2">
+	  For example, the flanges of I-shaped sections in pure
+	  compression with 
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>F</m:mi>
+		  <m:mi>y</m:mi>
+		</m:msub>
+	      </m:ci>
+	      <m:apply>
+		<m:times/>
+		<m:cn>50</m:cn>
+		<m:ci>ksi</m:ci>
+	      </m:apply>
+	    </m:apply>
+	  </m:math>, Table 6 gives the value of 15.9
+	  for:
+	  <equation id="bt">
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>λ</m:mi>
+		    <m:mi>r</m:mi>
+		  </m:msub>
+		</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>0.56</m:cn>
+		  <m:apply>
+		    <m:root/>
+		    <m:apply>
+		      <m:divide/>
+		      <m:ci>E</m:ci>
+		      <m:ci>
+			<m:msub>
+			  <m:mi>F</m:mi>
+			  <m:mi>y</m:mi>
+			</m:msub>
+		      </m:ci>
+		    </m:apply>
+		  </m:apply>
+		</m:apply>
+		<m:cn>15.9</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </equation>
+	</para>
+	
+      </section>
+
+      <para id="note">
+	<note type="NOTE" id="idm243456"><label>NOTE</label> Values for the ratios 
+	  <m:math>
+	    <m:apply>
+	      <m:divide/>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>b</m:mi>
+		  <m:mi>f</m:mi>
+		</m:msub>
+	      </m:ci>
+	      <m:apply>
+		<m:times/>
+		<m:cn>2</m:cn>
+		<m:ci>
+		  <m:msub>
+		    <m:mi>t</m:mi>
+		    <m:mi>f</m:mi>
+		  </m:msub>
+		</m:ci>
+	      </m:apply>
+	    </m:apply>
+	  </m:math>
+	  and 
+	  <m:math>
+	    <m:apply>
+	      <m:divide/>
+	      <m:ci>h</m:ci>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>t</m:mi>
+		  <m:mi>w</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:apply>
+	  </m:math> are tabulated in the dimensions and properties
+	  tables in Part 1 of the <emphasis>Manual</emphasis></note>
+      </para>
+    </content>
+    
+  </document>

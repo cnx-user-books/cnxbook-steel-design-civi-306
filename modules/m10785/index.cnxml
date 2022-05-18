@@ -1,0 +1,39 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+    <title>Introduction to Tension Members</title>
+    <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>85f479fd-24eb-4d30-a0b9-44e8e85073a0</md:uuid>
+</metadata>
+
+    <content>
+
+      <section id="tension">
+	<title>Tension</title>
+	<para id="tension1">
+	  Tension refers to the tensile force that can act on a member.
+	</para>
+	
+	<figure id="tension2">
+	  <media id="idp175152" alt=""><image src="../../media/tension.bmp" mime-type="image/bmp"/></media>
+	  <caption>An example of a member under tension.</caption>
+	</figure>
+	
+	<para id="tension3">
+	  In order to design tension members, it is important to
+	  analyze how the member would fail under both yielding and
+	  fracture.  These are the limit states.  The limit state that
+	  produces the smallest design strength is considered the
+	  controlling limit state.
+	</para>
+      </section>
+
+      <section id="where">
+	<title>Where to find information about tension members</title>
+	<para id="where1">
+	  The <cite><cite-title>AISC Manual of Steel Construction</cite-title></cite> lists the
+	  requirements for designing tension members in Chapter D of
+	  the Specifications Section (page 16.1-24).
+	</para>
+      </section>
+
+    </content>
+    
+</document>

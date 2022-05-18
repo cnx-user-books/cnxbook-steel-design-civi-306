@@ -1,0 +1,394 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Example finding Fcr</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>4aed1aea-ac5f-4332-952b-5c00b2f1304b</md:uuid>
+</metadata>
+
+  <content>
+    <section id="problem">
+      <title>Problem</title>
+      <para id="problem1">
+	A W12 X 72 is used as a column. It is 10 feet long and the
+	steel strength is 50 ksi.  Find the maximum compressive load
+	it can hold.
+      </para>
+    </section>   
+    
+    <section id="givens">
+      <title>Givens</title>
+      <para id="givens1">
+	The first section of the <emphasis>Manual</emphasis> will give
+	the properties for the W12 X 72 column.  
+	<m:math>
+	  <m:ci><m:msub>
+	      <m:mi>A</m:mi>
+	      <m:mi>g</m:mi>
+	    </m:msub></m:ci>
+	</m:math>, 
+	<m:math>
+	  <m:ci><m:msub>
+	      <m:mi>I</m:mi>
+	      <m:mi>x</m:mi>
+	    </m:msub></m:ci>
+	</m:math>, and 
+	<m:math>
+	  <m:ci><m:msub> 
+	      <m:mi>I</m:mi> 
+	      <m:mi>y</m:mi>
+	    </m:msub></m:ci> 
+	</m:math> are found on page <cite><cite-title>1-20</cite-title></cite> and
+	<cite><cite-title>1-21</cite-title></cite>.
+
+	<list id="givenlist"> 
+
+	  <item>W12 X 72</item> 
+
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>1</m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>10</m:cn>
+		  <m:ci>ft</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </item> 
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci><m:msub>
+		    <m:mi>F</m:mi>
+		    <m:mi>y</m:mi>
+		  </m:msub></m:ci>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>50</m:cn>
+		  <m:ci>ksi</m:ci>
+		</m:apply>
+	      </m:apply>
+	    </m:math>
+	  </item> 
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci><m:msub>
+		    <m:mi>A</m:mi>
+		    <m:mi>g</m:mi>
+		  </m:msub></m:ci>
+		<m:cn>21.2</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </item> 
+
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci><m:msub>
+		    <m:mi>I</m:mi>
+		    <m:mi>x</m:mi>
+		  </m:msub></m:ci>
+		<m:cn>597</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </item> 
+	  
+	  <item>
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci><m:msub>
+		    <m:mi>I</m:mi>
+		    <m:mi>y</m:mi>
+		  </m:msub></m:ci>
+		<m:cn>195</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </item> 
+
+	  <item>take 
+	    <m:math>
+	      <m:apply>
+		<m:eq/>
+		<m:ci>K</m:ci>
+		<m:cn>1</m:cn>
+	      </m:apply>
+	    </m:math>
+	  </item>
+	</list>
+      </para>
+    </section>
+
+    <section id="solution">
+      <title>Solution</title>
+      <para id="solution1">
+	The equations and AISC guidelines for solving this and other
+	columns and compression member problems can be found in the
+	<cite><cite-title>Manual</cite-title></cite> starting on page <cite><cite-title>16.1-27</cite-title></cite>.
+      </para>
+      <para id="solution2">
+	<list list-type="enumerated" id="list1">
+	  <item>
+	    First, find 
+	    <m:math>
+	      <m:ci>r</m:ci> 
+	    </m:math> (governing radius of gyration about the axis of
+	    buckling, in.):
+	    <equation id="eq1">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>r</m:ci>
+		  <m:ci><m:msub>
+		      <m:mi>r</m:mi>
+		      <m:mi>y</m:mi>
+		    </m:msub></m:ci>
+		  <m:apply>
+		    <m:root/>
+		    <m:apply>
+		      <m:divide/>
+		      <m:cn>195</m:cn>
+		      <m:cn>21.1</m:cn>
+		    </m:apply>
+		  </m:apply>
+		  <m:cn>3.04</m:cn>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	  </item>
+
+	  <item>
+	    <cite><cite-title>Section E2</cite-title></cite> of the <cite><cite-title>Specifications</cite-title></cite>
+	    section gives the equations to find the design compressive
+	    strength.
+	    <list id="variables">
+	      <item>
+		<m:math>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci><m:msub>
+			<m:mi>A</m:mi>
+			<m:mi>g</m:mi>
+		      </m:msub></m:ci>
+		    <m:mtext>gross area of member, square inches</m:mtext>
+		  </m:apply>
+		</m:math>
+	      </item>
+	      <item>
+		<m:math>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci><m:msub>
+			<m:mi>F</m:mi>
+			<m:mi>y</m:mi>
+		      </m:msub></m:ci>
+		    <m:mtext>specified minimum yield stress, ksi</m:mtext>
+		  </m:apply>
+		</m:math>
+	      </item>
+	      <item>
+		<m:math>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci>E</m:ci>
+		    <m:mtext>modulus of elasticity, ksi</m:mtext>
+		  </m:apply>
+		</m:math>
+	      </item>
+	      <item>
+		<m:math>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci>K</m:ci>
+		    <m:mtext>effective length factor</m:mtext>
+		  </m:apply>
+		</m:math>
+	      </item>
+	      <item>
+		<m:math>
+		  <m:apply>
+		    <m:eq/>
+		    <m:ci>l</m:ci>
+		    <m:mtext>laterally unbraced length of member, in.</m:mtext>
+		  </m:apply>
+		</m:math>
+	      </item>
+	    </list>
+	  </item>
+
+	  <item>
+	    Next find the design compressive strength by first finding
+	    the value for
+	    <m:math>
+	      <m:apply>
+		<m:ci><m:msub>
+		    <m:mi>λ</m:mi>
+		    <m:mi>c</m:mi>
+		  </m:msub></m:ci>
+	      </m:apply>
+	    </m:math>. 
+	    <equation id="eq2"> 
+	      <m:math display="block">
+		<m:apply>
+		  <m:eq/>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>λ</m:mi>
+		      <m:mi>c</m:mi>
+		    </m:msub>
+		  </m:ci>
+		  <m:apply>
+		    <m:times/>
+		    <m:apply>
+		      <m:divide/>
+		      <m:apply>
+			<m:times/>
+			<m:ci>K</m:ci>
+			<m:ci>l</m:ci>
+		      </m:apply>
+		      <m:apply>
+			<m:times/>
+			<m:ci>r</m:ci>
+			<m:pi/>
+		      </m:apply>
+		    </m:apply>
+		    <m:apply>
+		      <m:root/>
+		      <m:apply>
+			<m:divide/>
+			<m:ci><m:msub>
+			    <m:mi>F</m:mi>
+			    <m:mi>y</m:mi>
+			  </m:msub></m:ci>
+			<m:ci>E</m:ci>
+		      </m:apply>
+		    </m:apply>
+		  </m:apply>
+		  <m:cn>0.519</m:cn>
+		</m:apply>
+	      </m:math> 
+	    </equation>
+	  </item>
+
+	  <item>
+	    Since this is less than 1.5 the equation:
+	    <equation id="eq3">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci><m:msub>
+		      <m:mi>F</m:mi>
+		      <m:mi>cr</m:mi>
+		    </m:msub></m:ci>
+		  <m:apply>
+		    <m:times/>
+		    <m:apply>
+		      <m:power/>
+		      <m:cn>0.658</m:cn>    
+		      <m:apply>
+			<m:power/>
+			<m:ci><m:msub>
+			    <m:mi>λ</m:mi>
+			    <m:mn>c</m:mn>
+			  </m:msub></m:ci>
+			<m:cn>2</m:cn>
+		      </m:apply>      
+		    </m:apply>
+		    <m:ci><m:msub>
+			<m:mi>F</m:mi>
+			<m:mi>y</m:mi>
+		      </m:msub></m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	    </equation> can be used for <link document="m10688">Fcr</link> and the column is considered
+	    short and stocky.
+	  </item>
+	  
+	  <item>
+	    Therefore, 
+	    <equation id="eq4">
+	      <m:math>
+		<m:apply>
+		  <m:eq/>
+		  <m:ci><m:msub>
+		      <m:mi>F</m:mi>
+		      <m:mi>cr</m:mi>
+		    </m:msub></m:ci>
+		  <m:apply>
+		    <m:times/>
+		    <m:cn>44.7</m:cn>
+		    <m:ci>ksi</m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:math>
+	    </equation>
+	  </item>
+	</list>
+      </para> 
+    </section>
+    
+    <section id="answer">
+      <title>Answer</title>
+      <para id="solution5">
+	Now we can use the equation
+	<equation id="eq5">
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+	      <m:apply>
+		<m:times/>
+		<m:ci>φ</m:ci>
+		<m:ci><m:msub>
+		    <m:mi>P</m:mi>
+		    <m:mi>n</m:mi>
+		  </m:msub></m:ci>
+	      </m:apply>
+	      <m:apply>
+		<m:times/>
+		<m:ci>φ</m:ci>
+		<m:ci><m:msub>
+		    <m:mi>F</m:mi>
+		    <m:mi>cr</m:mi>
+		  </m:msub></m:ci>
+		<m:ci><m:msub>
+		    <m:mi>A</m:mi>
+		    <m:mi>g</m:mi>
+		  </m:msub></m:ci>
+	      </m:apply>
+	      <m:cn>802</m:cn>
+	    </m:apply>
+	  </m:math>
+	</equation>
+      </para>
+      
+      <para id="where">
+	where
+      </para>
+
+      <para id="math">
+	<equation id="eq20">
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+	      <m:ci>φ</m:ci>
+	      <m:cn>0.85</m:cn>
+	    </m:apply>
+	  </m:math>
+	</equation>
+      </para>  
+      
+      <para id="answer2">
+	So 802 k is the maximum load the column can sustain.
+      </para>
+    </section>
+    
+    <para id="needing">needs figure and help on question</para>
+    
+  </content>
+  
+</document>

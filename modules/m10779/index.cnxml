@@ -1,0 +1,203 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+    <title>The Modification Factor, Cb</title>
+    <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>9fe2c70f-edc6-4141-8bc2-3b78b1c67e2d</md:uuid>
+</metadata>
+
+    <content>
+      <section id="intro">
+	<title>Introduction to Cb</title>
+	<para id="intro1">
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>C</m:mi>
+		<m:mi>b</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  is a modification factor used in the equation for
+	  <term>nominal flexural strength</term> when determining
+	  <term>Lateral-Torsional Buckling</term>.  The reason for
+	  this factor is to allow for non-uniform moment diagrams when
+	  the ends of a beam segment are braced.  The conservative
+	  value for
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>C</m:mi>
+		<m:mi>b</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  can be taken as 1.0 as according to Chapter F2a of the
+	  Specification Section of the <emphasis>Manual</emphasis>
+	  (page 16.1-32) for all cases.  Also, the
+	  <emphasis>Manual</emphasis> gives a table of values for
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>C</m:mi>
+		<m:mi>b</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  for some loading conditions of simply supported beams.  This
+	  is located in Section 5 of the <emphasis>Manual</emphasis>
+	  (page 5-35) and is named, Table 5-1.
+	</para>
+      </section>
+
+      <section id="eqns">
+	<title>Equation for Cb</title>
+	<para id="eqns1">
+	  If the value of
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>C</m:mi>
+		<m:mi>b</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>
+	  is not given in Table 5-1, the equation in Chapter F2a of
+	  the Specification Section of the <emphasis>Manual</emphasis>
+	  (page 16.1-32), given here, can be used to find
+	  <m:math>
+	    <m:ci>
+	      <m:msub>
+		<m:mi>C</m:mi>
+		<m:mi>b</m:mi>
+	      </m:msub>
+	    </m:ci>
+	  </m:math>.
+	</para>
+	
+	<equation id="eqns2">
+	  <m:math>
+	    <m:apply>
+	      <m:eq/>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>C</m:mi>
+		  <m:mi>b</m:mi>
+		</m:msub>
+	      </m:ci>
+	      <m:apply>
+		<m:divide/>
+		<m:apply>
+		  <m:times/>
+		  <m:cn>12.5</m:cn>
+		  <m:ci>
+		    <m:msub>
+		      <m:mi>M</m:mi>
+		      <m:mi>max</m:mi>
+		    </m:msub>
+		  </m:ci>
+		</m:apply>
+		<m:apply>
+		  <m:plus/>
+		  <m:apply>
+		    <m:times/>
+		    <m:cn>2.5</m:cn>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>M</m:mi>
+			<m:mi>max</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:times/>
+		    <m:cn>3</m:cn>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>M</m:mi>
+			<m:mi>A</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:times/>
+		    <m:cn>4</m:cn>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>M</m:mi>
+			<m:mi>B</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		  <m:apply>
+		    <m:times/>
+		    <m:cn>3</m:cn>
+		    <m:ci>
+		      <m:msub>
+			<m:mi>M</m:mi>
+			<m:mi>C</m:mi>
+		      </m:msub>
+		    </m:ci>
+		  </m:apply>
+		</m:apply>
+	      </m:apply>
+	    </m:apply>
+	  </m:math>
+	</equation>
+
+	<list id="eqns3">
+	  <title>where:</title>
+	  <item>
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>M</m:mi>
+		  <m:mi>max</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    = absolute value of maximum moment in the unbraced segment, kip-in.
+	  </item>
+
+	  <item>
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>M</m:mi>
+		  <m:mi>A</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    = absolute value of maximum moment at quarter point of the
+	    unbraced segment, kip-in.
+	  </item>
+
+	  <item>
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>M</m:mi>
+		  <m:mi>B</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    = absolute value of maximum moment at centerline of the
+	    unbraced segment, kip-in.
+	  </item>
+
+	  <item>
+	    <m:math>
+	      <m:ci>
+		<m:msub>
+		  <m:mi>M</m:mi>
+		  <m:mi>C</m:mi>
+		</m:msub>
+	      </m:ci>
+	    </m:math>
+	    = absolute value of maximum moment at three-quarter point
+	    of the unbraced segment, kip-in.
+	  </item>
+	</list>
+	
+      </section>
+      
+    </content>
+    
+  </document>
